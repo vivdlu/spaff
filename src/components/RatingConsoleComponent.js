@@ -8,11 +8,12 @@ class RatingConsole extends Component {
     this.state = {
       currentCode: "Pooooop"
     };
+    this.onChangeCode = this.onChangeCode.bind(this);
   }
 
-  onChangeCode() {
-    this.props.changeCode(this.state.currentCode);
-    console.log(this.state.currentCode);
+  onChangeCode(event) {
+    this.props.changeCode(event.target.value);
+    console.log(event.target.value);
   }
 
   // handleClick(event) {
@@ -25,16 +26,16 @@ class RatingConsole extends Component {
 
     if (this.props.codes != null) {
 
-      const button = this.props.codes.map((code) => {
+      const button = this.props.codes.map(({ id }) => {
         return (
           <button
-          key={code.id}
-          value={code.id}
-          className="ratingBtn"
-          onClick={
-            this.onChangeCode.bind(this)
-          }>
-            <h1>{code.id}</h1>
+            key={id}
+            value={id}
+            className="ratingBtn"
+            onClick={
+              this.onChangeCode
+            }>
+            {id}
           </button>
         );
       });
