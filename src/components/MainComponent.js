@@ -33,7 +33,6 @@ class Main extends Component {
         <RatingConsole
           codes={this.state.codes}
           changeCode={this.onCodeChange.bind(this)}
-          initialCode={this.state.currentCode}
           />
       </div>
     );

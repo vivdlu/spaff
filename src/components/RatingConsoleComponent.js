@@ -2,24 +2,9 @@ import React, { Component } from 'react';
 
 class RatingConsole extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentCode: "Pooooop"
-    };
+  handleChange(event) {
+    this.props.changeCode(event.target.value);
   }
-
-  onChangeCode() {
-    this.props.changeCode(this.state.currentCode);
-    console.log(this.state.currentCode);
-  }
-
-  // handleClick(event) {
-  //   this.setState (
-  //     {currentCode: event.target.value}
-  //   );
-  // }
 
   render() {
 
@@ -32,9 +17,9 @@ class RatingConsole extends Component {
           value={code.id}
           className="ratingBtn"
           onClick={
-            this.onChangeCode.bind(this)
+            (event) => this.handleChange(event)
           }>
-            <h1>{code.id}</h1>
+            {code.id} {code.description}
           </button>
         );
       });

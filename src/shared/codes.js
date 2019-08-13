@@ -26,7 +26,7 @@ export const CODES =
   },
   {
     id: 7,
-    description:'Info Exchange &amp; Responses'
+    description:'Info Exchange & Responses'
   },
   {
     id: 8,
