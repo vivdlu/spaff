@@ -4,14 +4,6 @@ import { PLAYER } from '../shared/player';
 
 class Video extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentTime: this.props.currentTime
-    };
-  }
-
   render() {
     return (
       <div>
