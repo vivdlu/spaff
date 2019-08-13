@@ -29,7 +29,9 @@ class RatingConsole extends Component {
           key={code.id}
           value={code.id}
           className="ratingBtn"
-          onClick={(event) => this.handleCodeChange(event)}>{code.id}</button>
+          onClick={(event) => this.handleCodeChange(event)}>
+            <h1>{code.id}</h1><br />{code.description}
+          </button>
         );
       });
 

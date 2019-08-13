@@ -6,7 +6,7 @@ export const CODES =
   },
   {
     id: 2,
-    description:'Anger, Attack, Hostility, Low Dom, High Dom, Counter-attack, Criticism, Defensiveness'
+    description:'Anger, Attack, Hostility, Low/High Dom, Counter-attack, Criticism, Defensiveness'
   },
   {
     id: 3,
@@ -14,7 +14,7 @@ export const CODES =
   },
   {
     id: 4,
-    description:'Non-Counter-attack Innocent, Victim Defensiveness, Whining'
+    description:'Non-Counter-attack, Victim Defensiveness, Whining'
   },
   {
     id: 5,
