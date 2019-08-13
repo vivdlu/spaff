@@ -11,14 +11,14 @@ class Main extends Component {
     this.state = {
       codes: CODES,
       currentCode: 6,
-      currentCodeTime: 0
+      currentTime: 0
     };
   }
 
   onCodeChange(newCode) {
-    this.setState (
-      {currentCode: newCode}
-    );
+    this.setState ({
+      currentCode: newCode
+    });
   }
 
   render() {
@@ -29,10 +29,11 @@ class Main extends Component {
           <p>
             Current Code: {this.state.currentCode} at time {this.state.currentTime}
           </p>
-        <Video currentCodeTime={this.state.currentCodeTime} />
+        <Video currentCodeTime={this.state.currentTime} />
         <RatingConsole
           codes={this.state.codes}
-          codeChange={(event) => this.onCodeChange(event)}
+          changeCode={this.onCodeChange.bind(this)}
+          initialCode={this.state.currentCode}
           />
       </div>
     );

@@ -6,21 +6,20 @@ class RatingConsole extends Component {
     super(props);
 
     this.state = {
-      currentCode: this.props.currentCode
+      currentCode: "Pooooop"
     };
   }
 
-  changeState(event) {
-    this.setState (
-      {currentCode: parseInt(event.target.value)}
-    );
+  onChangeCode() {
+    this.props.changeCode(this.state.currentCode);
     console.log(this.state.currentCode);
   }
 
-  updateState(event) {
-    this.props.codeChange(this.state.currentCode);
-    console.log(this.state.currentCode);
-  }
+  // handleClick(event) {
+  //   this.setState (
+  //     {currentCode: event.target.value}
+  //   );
+  // }
 
   render() {
 
@@ -32,11 +31,10 @@ class RatingConsole extends Component {
           key={code.id}
           value={code.id}
           className="ratingBtn"
-          onClick={(event) => {
-            this.changeState(event);
-            this.updateState(event);
-          }}>
-            <h1>{code.id}</h1>{code.description}
+          onClick={
+            this.onChangeCode.bind(this)
+          }>
+            <h1>{code.id}</h1>
           </button>
         );
       });
@@ -46,6 +44,7 @@ class RatingConsole extends Component {
           {button}
         </div>
       );
+
     } else {
       return (
         <div></div>
