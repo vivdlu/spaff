@@ -10,14 +10,17 @@ class RatingConsole extends Component {
     };
   }
 
-    handleCodeChange(event) {
-      this.setState (
-        {currentCode: parseInt(event.target.value)},
-        () => {
-          this.props.codeChange(this.state.currentCode);
-        }
-      )
-    }
+  changeState(event) {
+    this.setState (
+      {currentCode: parseInt(event.target.value)}
+    );
+    console.log(this.state.currentCode);
+  }
+
+  updateState(event) {
+    this.props.codeChange(this.state.currentCode);
+    console.log(this.state.currentCode);
+  }
 
   render() {
 
@@ -29,8 +32,11 @@ class RatingConsole extends Component {
           key={code.id}
           value={code.id}
           className="ratingBtn"
-          onClick={(event) => this.handleCodeChange(event)}>
-            <h1>{code.id}</h1><br />{code.description}
+          onClick={(event) => {
+            this.changeState(event);
+            this.updateState(event);
+          }}>
+            <h1>{code.id}</h1>{code.description}
           </button>
         );
       });
