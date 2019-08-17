@@ -1,40 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class RatingConsole extends Component {
+function RatingConsole({codes, changeCode}) {
 
-  handleChange(event) {
-    this.props.changeCode(event.target.value);
+  function handleChange(event) {
+    changeCode(event.target.value);
   }
 
-  render() {
+  if (codes != null) {
 
-    if (this.props.codes != null) {
-
-      const button = this.props.codes.map((code) => {
-        return (
-          <button
-          key={code.id}
-          value={code.id}
-          className="ratingBtn"
-          onClick={
-            (event) => this.handleChange(event)
-          }>
-            {code.id} {code.description}
-          </button>
-        );
-      });
-
+    const button = codes.map((code) => {
       return (
-        <div>
-          {button}
-        </div>
+        <button
+        key={code.id}
+        value={code.id}
+        className="ratingBtn"
+        onClick={
+          (event) => handleChange(event)
+        }>
+          {code.id} {code.description}
+        </button>
       );
+    });
 
-    } else {
-      return (
-        <div></div>
-      );
-    }
+    return (
+      <div>
+        {button}
+      </div>
+    );
+
+  } else {
+    return (
+      <div></div>
+    );
   }
 }
 
