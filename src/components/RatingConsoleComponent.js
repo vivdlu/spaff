@@ -1,38 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactPlayer from 'react-player';
+import RatingDials from './RatingDialsComponent';
 
-function RatingConsole({codes, changeCode}) {
+class RatingConsole extends Component {
 
-  function handleChange(event) {
-    changeCode(event.target.value);
-  }
+  constructor(props) {
+      super(props);
+      this.state = {
+        currentTime: 0,
+        currentCode: 6
+      };
+      this.Player = React.createRef();
+      this.handleRatingChange = this.handleRatingChange.bind(this);
+    }
 
-  if (codes != null) {
+    handleRatingChange(newCode) {
+      const Player = this.Player.current;
+      this.setState({
+        currentTime: Player.getCurrentTime(),
+        currentCode: newCode
+      });
+    }
 
-    const button = codes.map((code) => {
+    render() {
+      console.log(this.state);
       return (
-        <button
-        key={code.id}
-        value={code.id}
-        className="ratingBtn"
-        onClick={
-          (event) => handleChange(event)
-        }>
-          {code.id} {code.description}
-        </button>
+        <div>
+          <ReactPlayer
+            ref={this.Player}
+            url="https://www.youtube.com/watch?v=TBZP7UIPtwY&t=28s"
+          />
+          <RatingDials
+            ratingChange={this.handleRatingChange}
+          />
+        </div>
       );
-    });
-
-    return (
-      <div>
-        {button}
-      </div>
-    );
-
-  } else {
-    return (
-      <div></div>
-    );
-  }
+    }
 }
 
 export default RatingConsole;

@@ -1,6 +1,10 @@
 .ratingBtn {
-  font-size: 9px;
+  font-size: 12px;
   margin: 10px;
-  width: 80px;
-  height: 150px;
+  width: 100px;
+  height: 200px;
+}
+
+.header {
+  text-align: center;
 }
