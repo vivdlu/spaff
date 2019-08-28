@@ -1,10 +1,21 @@
 .ratingBtn {
-  font-size: 12px;
-  margin: 5px;
-  width: 52px;
   height: 100px;
+  width: 9%;
+  margin: 0.5%;
 }
 
 .header {
   text-align: center;
+}
+
+.btn-primary {
+  background-color: #f9af1b;
+  border-color: #f9af1b;
+}
+
+.btn.btn-primary.focus,
+.btn.btn-primary:focus {
+  background-color: #7c570d;
+  border-color: #7c570d;
+  box-shadow: 0px 0px 5px 1px #888888;
 }

@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 import RatingDials from './RatingDialsComponent';
+import { CODES } from '../shared/codes';
+
+const video = {
+  src: "https://www.youtube.com/watch?v=TBZP7UIPtwY&t=28s"
+}
 
 class RatingConsole extends Component {
 
@@ -8,7 +13,8 @@ class RatingConsole extends Component {
       super(props);
       this.state = {
         currentTime: 0,
-        currentCode: 6
+        currentCode: 6,
+        codes: CODES,
       };
       this.Player = React.createRef();
       this.handleRatingChange = this.handleRatingChange.bind(this);
@@ -23,15 +29,23 @@ class RatingConsole extends Component {
     }
 
     render() {
+
       console.log(this.state);
       return (
         <div>
-          <ReactPlayer
-            ref={this.Player}
-            url="https://www.youtube.com/watch?v=TBZP7UIPtwY&t=28s"
-          />
+          <div className="row">
+            <ReactPlayer
+              className="player"
+              ref={this.Player}
+              url={video.src}
+              controls={true}
+              width="100%"
+              height="74%"
+            />
+          </div>
           <RatingDials
             ratingChange={this.handleRatingChange}
+            codes={this.state.codes}
           />
         </div>
       );

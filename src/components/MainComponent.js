@@ -6,8 +6,8 @@ class Main extends Component {
   render() {
 
     return (
-      <div>
-        <h1>SPAFF Coding App</h1>
+      <div className="container">
+        <h1 className="header">SPAFF Coding App</h1>
         <RatingConsole />
       </div>
     );
