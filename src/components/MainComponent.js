@@ -7,7 +7,7 @@ class Main extends Component {
 
     return (
       <div className="container">
-        <h1 className="header">SPAFF Coding App</h1>
+        <h4 className="header">SPAFF Coding App</h4>
         <RatingConsole />
       </div>
     );

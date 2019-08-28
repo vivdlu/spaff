@@ -1,21 +1,22 @@
-.ratingBtn {
-  height: 100px;
-  width: 9%;
-  margin: 0.5%;
-}
-
 .header {
   text-align: center;
 }
 
-.btn-primary {
-  background-color: #f9af1b;
-  border-color: #f9af1b;
+p.code-desc {
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1;
 }
 
-.btn.btn-primary.focus,
-.btn.btn-primary:focus {
-  background-color: #7c570d;
-  border-color: #7c570d;
-  box-shadow: 0px 0px 5px 1px #888888;
+.btn-primary {
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #309FC4;
+  border-color: #309FC4;
+  height: 110px;
+  width: 9%;
+  margin: 0.5%;
+  padding-left: 3px;
+  padding-right: 3px;
+  overflow: hidden;
 }
