@@ -2,11 +2,11 @@ export const CODES =
 [
   {
     id: 1,
-    description:'Disgust, Scorn, Contempt, Scolding, Belligerence, Stonewalling'
+    description:'Contempt, Belligerence, Stone walling'
   },
   {
     id: 2,
-    description:'Anger, Attack, Hostility, Low/High Dom, Counter-attack, Criticism, Defensiveness'
+    description:'Anger, L/H Dom, Criticism, Defensiveness'
   },
   {
     id: 3,
@@ -14,7 +14,7 @@ export const CODES =
   },
   {
     id: 4,
-    description:'Non-Counter-attack, Victim Defensiveness, Whining'
+    description:'Victim Defen siveness, Whining'
   },
   {
     id: 5,
@@ -26,18 +26,18 @@ export const CODES =
   },
   {
     id: 7,
-    description:'Info Exchange & Responses'
+    description:'Info Exchange and Responses'
   },
   {
     id: 8,
-    description:'Active Interest, Curiosity, Low Val (listener tracking)'
+    description:'Active Interest, Curiosity, Low Val'
   },
   {
     id: 9,
-    description:'Affection, Caring, Support, High Val, Empathy'
+    description:'Affection, Support, Empathy, High Val'
   },
   {
     id: 10,
-    description:'Shared Humor, Excitement, Surprise, Joy, Happiness'
+    description:'Shared Humor, Excitement, Happiness'
   },
 ];

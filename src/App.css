@@ -20,3 +20,9 @@ p.code-desc {
   padding-right: 3px;
   overflow: hidden;
 }
+
+.btn-primary:focus,
+.btn-primary.focus {
+  background-color: #007bff;
+  border-color: #007bff;
+}
