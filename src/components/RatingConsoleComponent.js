@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 import RatingDials from './RatingDialsComponent';
 import BeforeCodingModal from './BeforeCodingComponent';
+import AfterCodingModal from './AfterCodingComponent';
 import { CODES } from '../shared/codes';
 
 class RatingConsole extends Component {
@@ -15,12 +16,15 @@ class RatingConsole extends Component {
         src: "",
         coderName: "",
         codedPartner: "",
-        playing: false
+        playing: false,
+        endModal: false
       };
       this.Player = React.createRef();
       this.handleRatingChange = this.handleRatingChange.bind(this);
       this.handleTimeChange = this.handleTimeChange.bind(this);
+      this.handleNameChange = this.handleNameChange.bind(this);
       this.handleSrcChange = this.handleSrcChange.bind(this);
+      this.handleVideoEnd = this.handleVideoEnd.bind(this);
     }
 
     handleRatingChange(newCode) {
@@ -38,9 +42,28 @@ class RatingConsole extends Component {
       });
     }
 
+    handleNameChange(newName) {
+      this.setState({
+        coderName: newName
+      });
+    }
+
+    handlePartnerChange(newPartner) {
+      this.setState({
+        codedPartner: newPartner
+      });
+    }
+
     handleSrcChange(newSrc) {
       this.setState({
-        src: newSrc
+        src: newSrc,
+        playing: true
+      });
+    }
+
+    handleVideoEnd() {
+      this.setState({
+        endModal: true
       });
     }
 
@@ -48,7 +71,10 @@ class RatingConsole extends Component {
       return (
         <div>
           <BeforeCodingModal
-            srcChange={this.handleSrcChange} />
+            nameChange={this.handleNameChange}
+            partnerChange={this.handlePartnerChange}
+            srcChange={this.handleSrcChange}
+            />
           <div className="row">
             <ReactPlayer
               className="player"
@@ -59,12 +85,18 @@ class RatingConsole extends Component {
               height="74%"
               playing={this.state.playing}
               onProgress={this.handleTimeChange}
+              onEnded={this.handleVideoEnd}
             />
           </div>
           <RatingDials
             ratingChange={this.handleRatingChange}
             codes={this.state.codes}
           />
+        <AfterCodingModal
+            endModal={this.state.endModal}
+            coderName={this.state.coderName}
+            codedPartner={this.state.codedPartner}
+            />
         </div>
       );
     }
