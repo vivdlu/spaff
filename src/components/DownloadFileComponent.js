@@ -38,7 +38,7 @@ const dataSet1 = [
 class Download extends React.Component {
   render() {
     return (
-      <ExcelFile element={<Button outline color="primary">Download File</Button>}>
+      <ExcelFile element={<Button outline color="primary">Download</Button>}>
         <ExcelSheet data={dataSet1} name="ExampleCodes">
             <ExcelColumn label="Time" value="Time"/>
             <ExcelColumn label="1" value="1"/>

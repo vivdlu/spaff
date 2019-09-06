@@ -23,6 +23,7 @@ class RatingConsole extends Component {
       this.handleRatingChange = this.handleRatingChange.bind(this);
       this.handleTimeChange = this.handleTimeChange.bind(this);
       this.handleNameChange = this.handleNameChange.bind(this);
+      this.handlePartnerChange = this.handlePartnerChange.bind(this);
       this.handleSrcChange = this.handleSrcChange.bind(this);
       this.handleVideoEnd = this.handleVideoEnd.bind(this);
     }
@@ -34,11 +35,10 @@ class RatingConsole extends Component {
     }
 
     handleTimeChange() {
-
-      console.log(this.state)
+      console.log("Time:",this.state.currentTime, "Code:",this.state.currentCode)
       const Player = this.Player.current;
       this.setState({
-        currentTime: Player.getCurrentTime(),
+        currentTime: Math.round(Player.getCurrentTime()) - 300,
       });
     }
 
@@ -93,7 +93,7 @@ class RatingConsole extends Component {
             codes={this.state.codes}
           />
         <AfterCodingModal
-            endModal={this.state.endModal}
+            endModalToggle={this.state.endModal}
             coderName={this.state.coderName}
             codedPartner={this.state.codedPartner}
             />

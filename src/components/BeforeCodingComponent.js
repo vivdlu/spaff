@@ -37,6 +37,7 @@ class BeforeCodingModal extends Component {
 
   startCoding() {
     this.props.nameChange(this.state.coderName);
+    this.props.partnerChange(this.state.codedPartner);
     this.props.srcChange(this.state.src);
     this.setState({
       modal: !this.state.modal,
@@ -48,7 +49,7 @@ class BeforeCodingModal extends Component {
     return (
       <div>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Welcome to the SPAFF App!</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Begin Coding</ModalHeader>
           <ModalBody>
             <Form>
               <Row>
@@ -66,11 +67,14 @@ class BeforeCodingModal extends Component {
                 <Col>
                   <FormGroup>
                     <legend>Partner:</legend>
-                    <FormGroup check>
+                    <FormGroup
+                      onChange={(event) => this.onPartnerChange(event)}
+                      check>
                       <Label check>
                         <Input
                           type="radio"
                           name="radio1"
+                          value="left"
                           onChange={(event) => this.onPartnerChange(event)} />{' '}
                         Left
                       </Label>
@@ -80,6 +84,7 @@ class BeforeCodingModal extends Component {
                         <Input
                           type="radio"
                           name="radio1"
+                          value="right"
                           onChange={(event) => this.onPartnerChange(event)} />{' '}
                         Right
                       </Label>
