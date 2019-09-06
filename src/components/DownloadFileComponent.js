@@ -6,7 +6,7 @@ const ExcelFile = ReactExport.ExcelFile;
 const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
 const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
-const dataSet1 = [
+const codingData = [
   {
     time: 1,
     1: 0,
@@ -39,7 +39,7 @@ class Download extends React.Component {
   render() {
     return (
       <ExcelFile element={<Button outline color="primary">Download</Button>}>
-        <ExcelSheet data={dataSet1} name="ExampleCodes">
+        <ExcelSheet data={codingData} name="ExampleCodes">
             <ExcelColumn label="Time" value="Time"/>
             <ExcelColumn label="1" value="1"/>
             <ExcelColumn label="2" value="2"/>

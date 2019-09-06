@@ -35,11 +35,11 @@ class RatingConsole extends Component {
     }
 
     handleTimeChange() {
-      console.log("Time:",this.state.currentTime, "Code:",this.state.currentCode)
       const Player = this.Player.current;
       this.setState({
         currentTime: Math.round(Player.getCurrentTime()) - 300,
       });
+      console.log("Time:",this.state.currentTime, "Code:",this.state.currentCode)
     }
 
     handleNameChange(newName) {

@@ -48,8 +48,8 @@ class BeforeCodingModal extends Component {
   render() {
     return (
       <div>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Begin Coding</ModalHeader>
+        <Modal isOpen={this.state.modal} className={this.props.className}>
+          <ModalHeader>Begin Coding</ModalHeader>
           <ModalBody>
             <Form>
               <Row>
@@ -67,9 +67,7 @@ class BeforeCodingModal extends Component {
                 <Col>
                   <FormGroup>
                     <legend>Partner:</legend>
-                    <FormGroup
-                      onChange={(event) => this.onPartnerChange(event)}
-                      check>
+                    <FormGroup check>
                       <Label check>
                         <Input
                           type="radio"
