@@ -12,7 +12,11 @@ class AfterCodingModal extends Component {
           <ModalBody>
             {this.props.coderName}, you've finished rating the {this.props.codedPartner} partner. Click to download your data file.
           </ModalBody>
-          <ModalFooter><Download /></ModalFooter>
+          <ModalFooter>
+            <Download
+              importedRatings={this.props.importedRatings}
+            />
+          </ModalFooter>
         </Modal>
       </div>
     );

@@ -4,6 +4,7 @@ import RatingDials from './RatingDialsComponent';
 import BeforeCodingModal from './BeforeCodingComponent';
 import AfterCodingModal from './AfterCodingComponent';
 import { CODES } from '../shared/codes';
+import { importedRatings } from '../shared/importedRatings';
 
 class RatingConsole extends Component {
 
@@ -39,7 +40,7 @@ class RatingConsole extends Component {
       this.setState({
         currentTime: Math.round(Player.getCurrentTime()) - 300,
       });
-      console.log("Time:",this.state.currentTime, "Code:",this.state.currentCode)
+      importedRatings.push(this.state);
     }
 
     handleNameChange(newName) {
@@ -92,12 +93,13 @@ class RatingConsole extends Component {
             ratingChange={this.handleRatingChange}
             codes={this.state.codes}
           />
-        <AfterCodingModal
+          <AfterCodingModal
+            importedRatings={importedRatings}
             endModalToggle={this.state.endModal}
             coderName={this.state.coderName}
             codedPartner={this.state.codedPartner}
             />
-        </div>
+          </div>
       );
     }
 }
