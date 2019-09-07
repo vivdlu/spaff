@@ -1,1 +1,1 @@
-export let exportedRatings = [];
+export var exportedRatings = [];

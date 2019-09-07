@@ -1,31 +1,16 @@
 import React from 'react';
 import ReactExport from 'react-export-excel';
 import { Button } from 'reactstrap';
-import { exportedRatings } from '../shared/exportedRatings';
 
 const ExcelFile = ReactExport.ExcelFile;
 const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
 const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
-for (let i = 0; i < importedRatings.length; i++) {
-  let lineRating = {};
-  lineRating["time"] = importedRatings[i].currentTime;
-  for (let j = 1; j < 11; j++) {
-    if (importedRatings[i].currentCode === j) {
-      lineRating[j] = 1;
-    } else {
-      lineRating[j] = 0;
-    };
-  };
-  exportedRatings[i] = lineRating;
-};
-console.log(exportedRatings)
-
 class Download extends React.Component {
   render() {
     return (
       <ExcelFile element={<Button outline color="primary">Download</Button>}>
-        <ExcelSheet data={exportedRatings} name="ExampleCodes">
+        <ExcelSheet data={this.props.exportedRatings} name="ExampleCodes">
             <ExcelColumn label="Time" value="time"/>
             <ExcelColumn label="1" value="1"/>
             <ExcelColumn label="2" value="2"/>

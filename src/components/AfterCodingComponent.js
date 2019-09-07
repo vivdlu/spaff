@@ -14,7 +14,7 @@ class AfterCodingModal extends Component {
           </ModalBody>
           <ModalFooter>
             <Download
-              importedRatings={this.props.importedRatings}
+              exportedRatings={this.props.exportedRatings}
             />
           </ModalFooter>
         </Modal>
