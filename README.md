@@ -1,6 +1,6 @@
 ## Welcome to the SPAFF App
 
-This is an internal web app intended for use within The Gottman Institute, LLC, and the Love Lab at The Gottman Institute (https://www.gottman.com/love-lab/).
+This is an internal web app intended for use within The Gottman Institute, LLC, and the <a href="https://www.gottman.com/love-lab/" target="_blank">Love Lab at The Gottman Institute</a>.
 
 ## What is SPAFF?
 
@@ -10,7 +10,7 @@ Today, researchers in the Love Lab at The Gottman Institute continue to use the 
 
 ## Example
 
-To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public viewers of this app. To see an example of what the app in action, open the app (https://vivdlu.github.io/spaff) and paste the following link in the prompt window:
+To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public users of this app. To see an example of the app in action, open the app and paste the following video link in the prompt window:
 
 <blockquote>https://www.youtube.com/watch?v=TBZP7UIPtwY&t=300s</blockquote>
 
