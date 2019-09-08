@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RatingConsole from './RatingConsoleComponent';
 import Navbar from './NavbarComponent';
+import { Container } from '@material-ui/core';
 
 class Main extends Component {
 
@@ -8,9 +9,9 @@ class Main extends Component {
     return (
       <div>
         <Navbar />
-        <div className="container">
+        <Container maxWidth="md">
           <RatingConsole />
-        </div>
+        </Container>
       </div>
     );
   }

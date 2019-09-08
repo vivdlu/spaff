@@ -15,7 +15,11 @@ class RatingDials extends Component {
     const showButtons = this.props.codes.map((code) => {
       return (
         <Fragment key={code.id}>
-          <Button color="primary"  onClick={this.props.ratingChange.bind(null, code.id)}>{code.id}<br /><p className="code-desc">{code.description}</p></Button>
+          <Button
+            color="primary"
+            onClick={this.props.ratingChange.bind(null, code.id)}>
+            {code.id}<br /><p className="code-desc">{code.description}</p>
+          </Button>
         </Fragment>
       );
     });
