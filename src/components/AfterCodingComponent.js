@@ -3,14 +3,17 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Download from './DownloadFileComponent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import RefreshIcon from '@material-ui/icons/Refresh';
 
 class AfterCodingModal extends Component {
 
   render() {
+
+    const closeBtn = <Button className="refresh" onClick={this.props.refresh}><RefreshIcon /></Button>;
     return (
       <div>
         <Modal isOpen={this.props.endModalToggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>
+          <ModalHeader close={closeBtn}>
             <Typography variant="h5">Coding Completed</Typography>
           </ModalHeader>
           <ModalBody>
@@ -25,7 +28,6 @@ class AfterCodingModal extends Component {
               codedCouple={this.props.codedCouple}
               codedPartner={this.props.codedPartner}
             />
-          <Button variant="outlined" color="secondary" onClick={this.props.refresh}>Start Over</Button>
           </ModalFooter>
         </Modal>
       </div>
