@@ -1,8 +1,3 @@
-.container {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
 p.code-desc {
   font-size: 10px;
   font-weight: normal;
@@ -33,5 +28,5 @@ div.MuiFormControl-root {
 }
 
 .player {
-  padding-top: 8px;
+  padding-top: 0.5%;
 }
