@@ -92,7 +92,6 @@ class BeforeCodingModal extends Component {
                       value={this.state.codedPartner}
                       onChange={(event) => this.onPartnerChange(event)}
                     >
-                    <MenuItem value="" disabled>Select</MenuItem>
                       <MenuItem value="left">Left</MenuItem>
                       <MenuItem value="right">Right</MenuItem>
                     </Select>
