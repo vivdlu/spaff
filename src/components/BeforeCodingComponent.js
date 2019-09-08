@@ -1,22 +1,6 @@
 import React, { Component } from 'react';
-import { Modal, ModalHeader, ModalBody, ModalFooter, Form, Row, Col } from 'reactstrap';
-import Button from '@material-ui/core/Button';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
-import TextField from '@material-ui/core/TextField';
-import Input from '@material-ui/core/Input';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import FilledInput from '@material-ui/core/FilledInput';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Form } from 'reactstrap';
+import { Button, FormControl, TextField, InputLabel, MenuItem, Select, Grid, Typography } from '@material-ui/core';
 
 class BeforeCodingModal extends Component {
   constructor(props) {
@@ -118,7 +102,7 @@ class BeforeCodingModal extends Component {
               <Grid container spacing={3}>
                 <Grid item xs={12}>
                   <TextField
-                    label="Video Link"
+                    label="Video URL"
                     margin="dense"
                     variant="outlined"
                     name="url"
