@@ -17,6 +17,7 @@ class RatingConsole extends Component {
         codes: CODES,
         src: "",
         coderName: "",
+        codedCouple: "",
         codedPartner: "",
         playing: false,
         endModal: false
@@ -25,6 +26,7 @@ class RatingConsole extends Component {
       this.handleRatingChange = this.handleRatingChange.bind(this);
       this.handleTimeChange = this.handleTimeChange.bind(this);
       this.handleNameChange = this.handleNameChange.bind(this);
+      this.handleCoupleChange = this.handleCoupleChange.bind(this);
       this.handlePartnerChange = this.handlePartnerChange.bind(this);
       this.handleSrcChange = this.handleSrcChange.bind(this);
       this.handleVideoEnd = this.handleVideoEnd.bind(this);
@@ -62,6 +64,12 @@ class RatingConsole extends Component {
       });
     }
 
+    handleCoupleChange(newCouple) {
+      this.setState({
+        codedCouple: newCouple
+      });
+    }
+
     handlePartnerChange(newPartner) {
       this.setState({
         codedPartner: newPartner
@@ -86,6 +94,7 @@ class RatingConsole extends Component {
         <div>
           <BeforeCodingModal
             nameChange={this.handleNameChange}
+            coupleChange={this.handleCoupleChange}
             partnerChange={this.handlePartnerChange}
             srcChange={this.handleSrcChange}
             />
@@ -110,6 +119,7 @@ class RatingConsole extends Component {
             exportedRatings={exportedRatings}
             endModalToggle={this.state.endModal}
             coderName={this.state.coderName}
+            codedCouple={this.state.codedCouple}
             codedPartner={this.state.codedPartner}
             />
           </div>

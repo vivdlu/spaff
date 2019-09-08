@@ -7,10 +7,17 @@ const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
 const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
 class Download extends React.Component {
+
   render() {
+
+    var filename = String("SPAFF_" + this.props.coderName + "_" + this.props.codedCouple + "_" + this.props.codedPartner.toUpperCase());
     return (
-      <ExcelFile element={<Button outline color="primary">Download</Button>}>
-        <ExcelSheet data={this.props.exportedRatings} name="ExampleCodes">
+      <ExcelFile
+        filename={filename}
+        element={
+          <Button color="secondary">Download</Button>
+        }>
+        <ExcelSheet data={this.props.exportedRatings}>
             <ExcelColumn label="Time" value="time"/>
             <ExcelColumn label="1" value="1"/>
             <ExcelColumn label="2" value="2"/>

@@ -10,11 +10,14 @@ class AfterCodingModal extends Component {
         <Modal isOpen={this.props.endModalToggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Coding Completed</ModalHeader>
           <ModalBody>
-            {this.props.coderName}, you've finished rating the {this.props.codedPartner} partner. Click to download your data file.
+            {this.props.coderName}, you've finished rating the {this.props.codedPartner} partner of couple {this.props.codedCouple}. Click to download your data file.
           </ModalBody>
           <ModalFooter>
             <Download
               exportedRatings={this.props.exportedRatings}
+              coderName={this.props.coderName}
+              codedCouple={this.props.codedCouple}
+              codedPartner={this.props.codedPartner}
             />
           </ModalFooter>
         </Modal>
