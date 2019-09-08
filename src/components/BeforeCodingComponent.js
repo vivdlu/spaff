@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Form, Row, Col } from 'reactstrap';
+import Button from '@material-ui/core/Button';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import TextField from '@material-ui/core/TextField';
+import Input from '@material-ui/core/Input';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import FilledInput from '@material-ui/core/FilledInput';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 class BeforeCodingModal extends Component {
   constructor(props) {
@@ -58,75 +75,62 @@ class BeforeCodingModal extends Component {
     return (
       <div>
         <Modal isOpen={this.state.modal} className={this.props.className}>
-          <ModalHeader>Begin Coding</ModalHeader>
+          <ModalHeader>
+            <Typography variant="h5">Begin Coding</Typography>
+          </ModalHeader>
           <ModalBody>
             <Form>
-              <Row>
-                <Col>
-                  <FormGroup>
-                    <Label for="coderName">Your Name:</Label>
-                    <Input
-                      type="text"
-                      name="coderName"
-                      id="coderName"
-                      onChange={(event) => this.onNameChange(event)}
-                      />
-                  </FormGroup>
-                </Col>
-                <Col>
-                  <FormGroup>
-                    <Label for="coderName">Couple:</Label>
-                    <Input
-                      type="text"
-                      name="codedCouple"
-                      id="codedCouple"
-                      onChange={(event) => this.onCoupleChange(event)}
-                      />
-                  </FormGroup>
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={3}>
-                  <FormGroup>
-                  <legend>Partner:</legend>
-                  <FormGroup check>
-                    <Label check>
-                      <Input
-                        type="radio"
-                        name="radio1"
-                        value="left"
-                        onChange={(event) => this.onPartnerChange(event)} />{' '}
-                      Left
-                    </Label>
-                  </FormGroup>
-                  <FormGroup check>
-                    <Label check>
-                      <Input
-                        type="radio"
-                        name="radio1"
-                        value="right"
-                        onChange={(event) => this.onPartnerChange(event)} />{' '}
-                      Right
-                    </Label>
-                  </FormGroup>
-                </FormGroup>
-              </Col>
-              <Col sm={9}>
-                <FormGroup>
-                  <Label for="videoUrl">Video Link:</Label>
-                    <Input
-                      type="url"
-                      name="url"
-                      id="videoUrl"
-                      onChange={(event) => this.onSrcChange(event)}
-                    />
-                </FormGroup>
-                </Col>
-              </Row>
+              <Grid container spacing={3}>
+                <Grid item xs>
+                  <TextField
+                    label="Name"
+                    margin="dense"
+                    variant="outlined"
+                    name="coderName"
+                    id="coderName"
+                    onChange={(event) => this.onNameChange(event)}
+                  />
+                </Grid>
+                <Grid item xs>
+                  <TextField
+                    label="Couple"
+                    margin="dense"
+                    variant="outlined"
+                    name="codedCouple"
+                    id="codedCouple"
+                    onChange={(event) => this.onCoupleChange(event)}
+                  />
+                </Grid>
+                <Grid item xs>
+                  <FormControl>
+                    <InputLabel shrink>Partner</InputLabel>
+                    <Select
+                      value={this.state.codedPartner}
+                      onChange={(event) => this.onPartnerChange(event)}
+                    >
+                    <MenuItem value="" disabled>Select</MenuItem>
+                      <MenuItem value="left">Left</MenuItem>
+                      <MenuItem value="right">Right</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+              </Grid>
+              <Grid container spacing={3}>
+                <Grid item xs={12}>
+                  <TextField
+                    label="Video Link"
+                    margin="dense"
+                    variant="outlined"
+                    name="url"
+                    id="videoUrl"
+                    onChange={(event) => this.onSrcChange(event)}
+                  />
+                </Grid>
+              </Grid>
             </Form>
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={this.startCoding}>Start Coding</Button>{' '}
+            <Button variant="outlined" color="primary"  onClick={this.startCoding}>Start Coding</Button>{' '}
           </ModalFooter>
         </Modal>
       </div>

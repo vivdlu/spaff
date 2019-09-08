@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Download from './DownloadFileComponent';
+import Typography from '@material-ui/core/Typography';
 
 class AfterCodingModal extends Component {
 
@@ -8,9 +9,13 @@ class AfterCodingModal extends Component {
     return (
       <div>
         <Modal isOpen={this.props.endModalToggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Coding Completed</ModalHeader>
+          <ModalHeader toggle={this.toggle}>
+            <Typography variant="h5">Coding Completed</Typography>
+          </ModalHeader>
           <ModalBody>
-            {this.props.coderName}, you've finished rating the {this.props.codedPartner} partner of couple {this.props.codedCouple}. Click to download your data file.
+            <Typography variant="body1">
+              {this.props.coderName}, you've finished rating the {this.props.codedPartner} partner of couple {this.props.codedCouple}. Click the button to download your data file.
+            </Typography>
           </ModalBody>
           <ModalFooter>
             <Download

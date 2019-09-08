@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactExport from 'react-export-excel';
-import { Button } from 'reactstrap';
+import Button from '@material-ui/core/Button';
 
 const ExcelFile = ReactExport.ExcelFile;
 const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
@@ -15,7 +15,7 @@ class Download extends React.Component {
       <ExcelFile
         filename={filename}
         element={
-          <Button color="secondary">Download</Button>
+          <Button variant="outlined" color="primary">Download</Button>
         }>
         <ExcelSheet data={this.props.exportedRatings} name="Sheet">
             <ExcelColumn label="Time" value="time"/>

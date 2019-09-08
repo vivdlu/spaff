@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import RatingConsole from './RatingConsoleComponent';
-import { Navbar, NavbarBrand } from 'reactstrap';
+import Navbar from './NavbarComponent';
 
 class Main extends Component {
 
   render() {
-
     return (
       <div>
-        <Navbar>
-          <NavbarBrand href="/">SPAFF Coding App</NavbarBrand>
-        </Navbar>
+        <Navbar />
         <div className="container">
           <RatingConsole />
         </div>
