@@ -26,3 +26,7 @@ div.MuiFormControl-root {
   background-color: #007bff;
   border-color: #007bff;
 }
+
+.player {
+  padding-top: 15px;
+}

@@ -76,7 +76,7 @@ class BeforeCodingModal extends Component {
       <div>
         <Modal isOpen={this.state.modal} className={this.props.className}>
           <ModalHeader>
-            <Typography variant="h5">Begin Coding</Typography>
+            <Typography variant="h5">Start Coding</Typography>
           </ModalHeader>
           <ModalBody>
             <Form>
