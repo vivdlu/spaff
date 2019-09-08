@@ -29,6 +29,7 @@ class RatingConsole extends Component {
       this.handleCoupleChange = this.handleCoupleChange.bind(this);
       this.handlePartnerChange = this.handlePartnerChange.bind(this);
       this.handleSrcChange = this.handleSrcChange.bind(this);
+      this.handleVideoStart = this.handleVideoStart.bind(this);
       this.handleVideoEnd = this.handleVideoEnd.bind(this);
       this.refreshPage = this.refreshPage.bind(this);
     }
@@ -84,6 +85,11 @@ class RatingConsole extends Component {
       });
     }
 
+    handleVideoStart() {
+      const Player = this.Player.current;
+      Player.seekTo(300, "seconds");
+    }
+
     handleVideoEnd() {
       this.setState({
         endModal: true
@@ -112,6 +118,9 @@ class RatingConsole extends Component {
               width="100%"
               height="74%"
               playing={this.state.playing}
+              playsinline="true"
+              controls="true"
+              onStart={this.handleVideoStart}
               onProgress={this.handleTimeChange}
               onEnded={this.handleVideoEnd}
             />
