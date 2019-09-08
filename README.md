@@ -1,68 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome to the SPAFF App
 
-## Available Scripts
+This is an internal web app intended for use within The Gottman Institute, LLC, and the Love Lab at The Gottman Institute (https://www.gottman.com/love-lab/).
 
-In the project directory, you can run:
+## What is SPAFF?
 
-### `npm start`
+In 1989, the Specific Affect Coding System (SPAFF) was developed by John Gottman, Ph.D., and Lowell J. Krokoff, Ph.D., for the purpose of systematically observing affective behavior in the context of marital conflict. The original SPAFF conferred a host of advantages over earlier “microanalytic” coding strategies, the primary innovation being the ability to code affect at the construct level instead of at the level of extremely discrete bits of behavior, such as specific gestures or facial movements (Gott- man, McCoy, Coan, & Collier, 1995).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Today, researchers in the Love Lab at The Gottman Institute continue to use the Specific Affect Coding System to analyze the affective behavior of couples during observed conflict discussions. This app is intended to digitize that process by providing an online interface for rating couples.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Example
 
-### `npm test`
+To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public viewers of this app. To see an example of what the app in action, open the app (https://vivdlu.github.io/spaff) and paste the following link in the prompt window:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<blockquote>https://www.youtube.com/watch?v=TBZP7UIPtwY&t=300s</blockquote>
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<strong>Please note:</strong> This app works best when used on a mobile device in landscape mode.
