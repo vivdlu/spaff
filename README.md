@@ -1,6 +1,6 @@
 ## Welcome to the SPAFF App
 
-This is an internal web app intended for use within The Gottman Institute, LLC, and the <a href="https://www.gottman.com/love-lab/" target="_blank">Love Lab at The Gottman Institute</a>.
+This is a web app intended for internal use within The Gottman Institute, LLC, and the <a href="https://www.gottman.com/love-lab/" target="_blank">Love Lab at The Gottman Institute</a>.
 
 ## What is SPAFF?
 
