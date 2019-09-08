@@ -12,6 +12,6 @@ Today, researchers in the Love Lab at The Gottman Institute continue to use the 
 
 To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public users of this app. To see an example of the app in action, open the app and paste the following video link in the prompt window:
 
-<blockquote>https://www.youtube.com/watch?v=TBZP7UIPtwY&t=300s</blockquote>
+<blockquote>https://youtu.be/LenI9bq1814?t=300s</blockquote>
 
 <strong>Please note:</strong> This app works best when used on a mobile device in landscape mode.
