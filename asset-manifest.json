@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/spaff-app/static/css/main.aa7b61fd.chunk.css",
+    "main.js": "/spaff-app/static/js/main.b25f8e43.chunk.js",
+    "main.js.map": "/spaff-app/static/js/main.b25f8e43.chunk.js.map",
+    "runtime~main.js": "/spaff-app/static/js/runtime~main.cf28704a.js",
+    "runtime~main.js.map": "/spaff-app/static/js/runtime~main.cf28704a.js.map",
+    "static/css/2.637eed6c.chunk.css": "/spaff-app/static/css/2.637eed6c.chunk.css",
+    "static/js/2.08f1f00a.chunk.js": "/spaff-app/static/js/2.08f1f00a.chunk.js",
+    "static/js/2.08f1f00a.chunk.js.map": "/spaff-app/static/js/2.08f1f00a.chunk.js.map",
+    "index.html": "/spaff-app/index.html",
+    "precache-manifest.04a5bc0b7939f7ce40c412f6d8a8af14.js": "/spaff-app/precache-manifest.04a5bc0b7939f7ce40c412f6d8a8af14.js",
+    "service-worker.js": "/spaff-app/service-worker.js",
+    "static/css/2.637eed6c.chunk.css.map": "/spaff-app/static/css/2.637eed6c.chunk.css.map",
+    "static/css/main.aa7b61fd.chunk.css.map": "/spaff-app/static/css/main.aa7b61fd.chunk.css.map"
+  }
+}
