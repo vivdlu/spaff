@@ -29,6 +29,7 @@ class Download extends React.Component {
             <ExcelColumn label="8" value="8"/>
             <ExcelColumn label="9" value="9"/>
             <ExcelColumn label="10" value="10"/>
+            <ExcelColumn label={filename} value="filename" />
         </ExcelSheet>
       </ExcelFile>
     );
