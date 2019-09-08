@@ -130,7 +130,7 @@ class BeforeCodingModal extends Component {
             </Form>
           </ModalBody>
           <ModalFooter>
-            <Button variant="outlined" color="primary"  onClick={this.startCoding}>Start Coding</Button>{' '}
+            <Button variant="contained" color="primary"  onClick={this.startCoding}>Start Coding</Button>{' '}
           </ModalFooter>
         </Modal>
       </div>

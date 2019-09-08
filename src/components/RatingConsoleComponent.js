@@ -30,6 +30,7 @@ class RatingConsole extends Component {
       this.handlePartnerChange = this.handlePartnerChange.bind(this);
       this.handleSrcChange = this.handleSrcChange.bind(this);
       this.handleVideoEnd = this.handleVideoEnd.bind(this);
+      this.refreshPage = this.refreshPage.bind(this);
     }
 
     handleRatingChange(newCode) {
@@ -89,6 +90,10 @@ class RatingConsole extends Component {
       });
     }
 
+    refreshPage() {
+      window.location.reload(true);
+    }
+
     render() {
       return (
         <div>
@@ -121,6 +126,7 @@ class RatingConsole extends Component {
             coderName={this.state.coderName}
             codedCouple={this.state.codedCouple}
             codedPartner={this.state.codedPartner}
+            refresh={this.refreshPage}
             />
           </div>
       );

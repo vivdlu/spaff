@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Download from './DownloadFileComponent';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 class AfterCodingModal extends Component {
 
@@ -24,6 +25,7 @@ class AfterCodingModal extends Component {
               codedCouple={this.props.codedCouple}
               codedPartner={this.props.codedPartner}
             />
+          <Button variant="outlined" color="secondary" onClick={this.props.refresh}>Start Over</Button>
           </ModalFooter>
         </Modal>
       </div>
