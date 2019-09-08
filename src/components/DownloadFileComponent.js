@@ -17,7 +17,7 @@ class Download extends React.Component {
         element={
           <Button color="secondary">Download</Button>
         }>
-        <ExcelSheet data={this.props.exportedRatings}>
+        <ExcelSheet data={this.props.exportedRatings} name="Sheet">
             <ExcelColumn label="Time" value="time"/>
             <ExcelColumn label="1" value="1"/>
             <ExcelColumn label="2" value="2"/>
