@@ -4,6 +4,10 @@ p.code-desc {
   line-height: 1;
 }
 
+div.MuiFormControl-root {
+  width: 100%;
+}
+
 .btn-primary {
   font-size: 15px;
   font-weight: bold;
