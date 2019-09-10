@@ -17,7 +17,7 @@ class AfterCodingModal extends Component {
           </ModalHeader>
           <ModalBody>
             <Typography variant="body1">
-              {this.props.coderName}, you've finished rating the {this.props.codedPartner} partner of couple {this.props.codedCouple}. Click the button to download your data file.
+              {this.props.coderName}, you've finished rating the {this.props.codedPartner} partner of couple {this.props.codedCouple} in their {this.props.codedDiscussion} discussion. Click the button to download your data file.
             </Typography>
           </ModalBody>
           <ModalFooter>
@@ -26,6 +26,7 @@ class AfterCodingModal extends Component {
               coderName={this.props.coderName}
               codedCouple={this.props.codedCouple}
               codedPartner={this.props.codedPartner}
+              codedDiscussion={this.props.codedDiscussion}
             />
           </ModalFooter>
         </Modal>

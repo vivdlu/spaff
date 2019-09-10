@@ -101,8 +101,8 @@ class BeforeCodingModal extends Component {
                       value={this.state.codedPartner}
                       onChange={(event) => this.onPartnerChange(event)}
                     >
-                      <MenuItem value="left">Left</MenuItem>
-                      <MenuItem value="right">Right</MenuItem>
+                      <MenuItem value="LEFT">Left</MenuItem>
+                      <MenuItem value="RIGHT">Right</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
@@ -125,8 +125,8 @@ class BeforeCodingModal extends Component {
                       value={this.state.codedDiscussion}
                       onChange={(event) => this.onDiscussionChange(event)}
                     >
-                      <MenuItem value="events">Events</MenuItem>
-                      <MenuItem value="conflict">Conflict</MenuItem>
+                      <MenuItem value="EVENTS">Events</MenuItem>
+                      <MenuItem value="CONFLICT">Conflict</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
