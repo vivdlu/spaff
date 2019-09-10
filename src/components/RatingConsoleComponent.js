@@ -19,6 +19,7 @@ class RatingConsole extends Component {
         coderName: "",
         codedCouple: "",
         codedPartner: "",
+        codedDiscussion: "",
         playing: false,
         endModal: false
       };
@@ -29,6 +30,7 @@ class RatingConsole extends Component {
       this.handleCoupleChange = this.handleCoupleChange.bind(this);
       this.handlePartnerChange = this.handlePartnerChange.bind(this);
       this.handleSrcChange = this.handleSrcChange.bind(this);
+      this.handleDiscussionChange = this.handleDiscussionChange.bind(this);
       this.handleVideoStart = this.handleVideoStart.bind(this);
       this.handleVideoEnd = this.handleVideoEnd.bind(this);
       this.refreshPage = this.refreshPage.bind(this);
@@ -85,6 +87,12 @@ class RatingConsole extends Component {
       });
     }
 
+    handleDiscussionChange(newDiscussion) {
+      this.setState({
+        src: newDiscussion
+      });
+    }
+
     handleVideoStart() {
       const Player = this.Player.current;
       Player.seekTo(300, "seconds");
@@ -108,6 +116,7 @@ class RatingConsole extends Component {
             coupleChange={this.handleCoupleChange}
             partnerChange={this.handlePartnerChange}
             srcChange={this.handleSrcChange}
+            discussionChange={this.handleDiscussionChange}
             />
           <div className="player-wrapper">
             <ReactPlayer
@@ -135,6 +144,7 @@ class RatingConsole extends Component {
             coderName={this.state.coderName}
             codedCouple={this.state.codedCouple}
             codedPartner={this.state.codedPartner}
+            codedDiscussion={this.state.codedDiscussion}
             refresh={this.refreshPage}
             />
           </div>

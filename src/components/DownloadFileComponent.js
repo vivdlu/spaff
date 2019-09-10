@@ -10,7 +10,7 @@ class Download extends React.Component {
 
   render() {
 
-    var filename = String("SPAFF_" + this.props.coderName + "_" + this.props.codedCouple + "_" + this.props.codedPartner.toUpperCase());
+    var filename = String("SPAFF_" + this.props.codedCouple + "_" + this.props.codedDiscussion + "_" + this.props.codedPartner.toUpperCase() + "__" + this.props.coderName);
     return (
       <ExcelFile
         filename={filename}

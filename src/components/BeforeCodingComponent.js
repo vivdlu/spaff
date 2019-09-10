@@ -11,12 +11,14 @@ class BeforeCodingModal extends Component {
       src: "",
       coderName: "",
       codedCouple: "",
-      codedPartner: ""
+      codedPartner: "",
+      codedDiscussion: ""
     };
     this.onNameChange = this.onNameChange.bind(this);
     this.onCoupleChange = this.onCoupleChange.bind(this);
     this.onPartnerChange = this.onPartnerChange.bind(this);
     this.onSrcChange = this.onSrcChange.bind(this);
+    this.onDiscussionChange = this.onDiscussionChange.bind(this);
     this.startCoding = this.startCoding.bind(this);
   }
 
@@ -44,11 +46,18 @@ class BeforeCodingModal extends Component {
     });
   }
 
+  onDiscussionChange(event) {
+    this.setState({
+      codedDiscussion: event.target.value
+    });
+  }
+
   startCoding() {
     this.props.nameChange(this.state.coderName);
     this.props.coupleChange(this.state.codedCouple);
     this.props.partnerChange(this.state.codedPartner);
     this.props.srcChange(this.state.src);
+    this.props.discussionChange(this.state.src);
     this.setState({
       modal: !this.state.modal,
       playing: true
@@ -99,7 +108,7 @@ class BeforeCodingModal extends Component {
                 </Grid>
               </Grid>
               <Grid container spacing={3}>
-                <Grid item xs={12}>
+                <Grid item xs={8}>
                   <TextField
                     label="Video URL"
                     margin="dense"
@@ -108,6 +117,18 @@ class BeforeCodingModal extends Component {
                     id="videoUrl"
                     onChange={(event) => this.onSrcChange(event)}
                   />
+                </Grid>
+                <Grid item xs={4}>
+                  <FormControl>
+                    <InputLabel shrink>Discussion</InputLabel>
+                    <Select
+                      value={this.state.codedDiscussion}
+                      onChange={(event) => this.onDiscussionChange(event)}
+                    >
+                      <MenuItem value="events">Events</MenuItem>
+                      <MenuItem value="conflict">Conflict</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Grid>
               </Grid>
             </Form>
