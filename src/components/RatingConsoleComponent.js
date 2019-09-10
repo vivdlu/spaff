@@ -58,7 +58,9 @@ class RatingConsole extends Component {
             lineRating[j] = 0;
           };
         };
-        exportedRatings[i] = lineRating;
+        if (lineRating["time"] > 0) {
+          exportedRatings[i] = lineRating;
+        }
       };
     }
 
