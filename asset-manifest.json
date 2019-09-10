@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/spaff/static/css/main.93daa59d.chunk.css",
-    "main.js": "/spaff/static/js/main.5e5aa60d.chunk.js",
-    "main.js.map": "/spaff/static/js/main.5e5aa60d.chunk.js.map",
+    "main.js": "/spaff/static/js/main.6aa49f08.chunk.js",
+    "main.js.map": "/spaff/static/js/main.6aa49f08.chunk.js.map",
     "runtime~main.js": "/spaff/static/js/runtime~main.6f00aec4.js",
     "runtime~main.js.map": "/spaff/static/js/runtime~main.6f00aec4.js.map",
     "static/css/2.819eb4d1.chunk.css": "/spaff/static/css/2.819eb4d1.chunk.css",
     "static/js/2.f91ab7a0.chunk.js": "/spaff/static/js/2.f91ab7a0.chunk.js",
     "static/js/2.f91ab7a0.chunk.js.map": "/spaff/static/js/2.f91ab7a0.chunk.js.map",
     "index.html": "/spaff/index.html",
-    "precache-manifest.5fb4658442ad32cc3721b86b7015eb6c.js": "/spaff/precache-manifest.5fb4658442ad32cc3721b86b7015eb6c.js",
+    "precache-manifest.e073376534d348a401335232656ca970.js": "/spaff/precache-manifest.e073376534d348a401335232656ca970.js",
     "service-worker.js": "/spaff/service-worker.js",
     "static/css/2.819eb4d1.chunk.css.map": "/spaff/static/css/2.819eb4d1.chunk.css.map",
     "static/css/main.93daa59d.chunk.css.map": "/spaff/static/css/main.93daa59d.chunk.css.map"
