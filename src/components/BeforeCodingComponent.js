@@ -59,7 +59,7 @@ class BeforeCodingModal extends Component {
     this.props.srcChange(this.state.src);
     this.props.discussionChange(this.state.src);
     this.setState({
-      modal: !this.state.modal,
+      modal: false,
       playing: true
     });
   }
@@ -134,7 +134,7 @@ class BeforeCodingModal extends Component {
             </Form>
           </ModalBody>
           <ModalFooter>
-            <Button variant="contained" color="primary"  onClick={this.startCoding}>Start</Button>{' '}
+            <Button variant="contained" color="primary"  onClick={this.startCoding}>Start</Button>
           </ModalFooter>
         </Modal>
       </div>

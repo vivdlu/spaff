@@ -89,7 +89,7 @@ class RatingConsole extends Component {
 
     handleDiscussionChange(newDiscussion) {
       this.setState({
-        src: newDiscussion
+        codedDiscussion: newDiscussion
       });
     }
 
