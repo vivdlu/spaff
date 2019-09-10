@@ -56,8 +56,8 @@ class BeforeCodingModal extends Component {
     this.props.nameChange(this.state.coderName);
     this.props.coupleChange(this.state.codedCouple);
     this.props.partnerChange(this.state.codedPartner);
+    this.props.discussionChange(this.state.codedDiscussion);
     this.props.srcChange(this.state.src);
-    this.props.discussionChange(this.state.src);
     this.setState({
       modal: false,
       playing: true

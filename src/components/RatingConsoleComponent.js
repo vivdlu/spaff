@@ -123,7 +123,6 @@ class RatingConsole extends Component {
               className="player"
               ref={this.Player}
               url={this.state.src}
-              controls={true}
               width="100%"
               height="100%"
               playing={this.state.playing}
