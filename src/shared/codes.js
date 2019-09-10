@@ -10,11 +10,11 @@ export const CODES =
   },
   {
     id: 3,
-    description:'Sadness, Disappointment, Despair, Hurt'
+    description:'Sadness, Despair, Hurt, Disappoint ment'
   },
   {
     id: 4,
-    description:'Victim Defen siveness, Whining'
+    description:'Victim Defensiveness, Whining'
   },
   {
     id: 5,

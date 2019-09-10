@@ -109,14 +109,14 @@ class RatingConsole extends Component {
             partnerChange={this.handlePartnerChange}
             srcChange={this.handleSrcChange}
             />
-          <div className="row">
+          <div className="player-wrapper">
             <ReactPlayer
               className="player"
               ref={this.Player}
               url={this.state.src}
               controls={true}
               width="100%"
-              height="74%"
+              height="100%"
               playing={this.state.playing}
               playsinline="true"
               controls="true"

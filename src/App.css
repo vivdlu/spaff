@@ -1,19 +1,11 @@
-p.code-desc {
-  font-size: 10px;
-  font-weight: normal;
-  line-height: 1;
-}
-
-div.MuiFormControl-root {
-  width: 100%;
-}
-
+/* Rating Button Styles*/
 .btn-primary {
   font-size: 15px;
   font-weight: bold;
   background-color: #3f51b5;
   border-color: #3f51b5;
-  height: 102px;
+  border-radius: 4px;
+  height: 100px;
   width: 9%;
   margin: 0.5%;
   padding-left: 3px;
@@ -28,6 +20,39 @@ div.MuiFormControl-root {
   border-color: #007bff;
 }
 
+p.code-desc {
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+/* Video Player Styles */
 .player {
   padding-top: 7px;
+}
+
+/* Form Styles */
+div.MuiFormControl-root {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+
+  /* iPad rating button styles */
+  .btn-primary {
+    height: 300px;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  p.code-desc {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  /* iPad video player styles */
+  .player {
+    padding-top: 20px;
+    height: 350px !important;
+  }
 }

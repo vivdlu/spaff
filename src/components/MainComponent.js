@@ -9,7 +9,7 @@ class Main extends Component {
     return (
       <div>
         <Navbar />
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           <RatingConsole />
         </Container>
       </div>
