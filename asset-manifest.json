@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spaff/static/css/main.93daa59d.chunk.css",
+    "main.css": "/spaff/static/css/main.684f42c4.chunk.css",
     "main.js": "/spaff/static/js/main.46d85ba0.chunk.js",
     "main.js.map": "/spaff/static/js/main.46d85ba0.chunk.js.map",
     "runtime~main.js": "/spaff/static/js/runtime~main.6f00aec4.js",
@@ -9,9 +9,9 @@
     "static/js/2.f91ab7a0.chunk.js": "/spaff/static/js/2.f91ab7a0.chunk.js",
     "static/js/2.f91ab7a0.chunk.js.map": "/spaff/static/js/2.f91ab7a0.chunk.js.map",
     "index.html": "/spaff/index.html",
-    "precache-manifest.62f8f7c90465b255beef065a988efa97.js": "/spaff/precache-manifest.62f8f7c90465b255beef065a988efa97.js",
+    "precache-manifest.ec81abafb1b6fc137897ce0fd626554c.js": "/spaff/precache-manifest.ec81abafb1b6fc137897ce0fd626554c.js",
     "service-worker.js": "/spaff/service-worker.js",
     "static/css/2.819eb4d1.chunk.css.map": "/spaff/static/css/2.819eb4d1.chunk.css.map",
-    "static/css/main.93daa59d.chunk.css.map": "/spaff/static/css/main.93daa59d.chunk.css.map"
+    "static/css/main.684f42c4.chunk.css.map": "/spaff/static/css/main.684f42c4.chunk.css.map"
   }
 }
