@@ -18,6 +18,6 @@ To maintain HIPAA-compliance, actual video footage from the lab is unavailable f
 
 <strong>*** Please note:</strong> This app works best when used on a mobile device in landscape mode.
 
-In the lab, actual videos (which start at the 5-minute mark and end at the 20-minute mark) will render a downloadable .xlsx file for formatted for further data analysis in the lab:
+In the lab, actual videos (which start at the 5-minute mark and end at the 20-minute mark) will produce a downloadable .xlsx file formatted for further data analysis in the lab:
 
 <img src="https://i.imgur.com/ynYM8tU.png">
