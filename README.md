@@ -1,6 +1,6 @@
 ## Welcome to the SPAFF App
 
-This is a web app intended for internal use within The Gottman Institute, LLC, and the <a href="https://www.gottman.com/love-lab/" target="_blank">Love Lab at The Gottman Institute</a>.
+This is a React web app intended for internal use within The Gottman Institute, LLC, and the <a href="https://www.gottman.com/love-lab/" target="_blank">Love Lab at The Gottman Institute</a>.
 
 ## About SPAFF
 
@@ -18,6 +18,6 @@ To maintain HIPAA-compliance, actual video footage from the lab is unavailable f
 
 <strong>*** Please note:</strong> This app works best when used on a mobile device in landscape mode.
 
-In the lab, actual videos (which start at the 5-minute mark and end at the 20-minute mark) will produce a downloadable .xlsx file formatted for further data analysis in the lab:
+The ratings selected during the duration of the video are tracked in the state object. When the video ends, the state is translated into a downloadable .xlsx file formatted for further data analysis in the lab:
 
 <img src="https://i.imgur.com/ynYM8tU.png">
