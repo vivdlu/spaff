@@ -10,10 +10,14 @@ In 1989, the Specific Affect Coding System (SPAFF) was developed by John Gottman
 
 Today, researchers in the Love Lab at The Gottman Institute continue to use the Specific Affect Coding System to analyze the affective behavior of couples during observed conflict discussions. This app is intended to digitize the process (previously conducted on equipment housed in the lab) by providing an online interface for rating couples with more mobility, accuracy, and scalability.
 
-## Example
+## Demo
 
-To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public users of this app. To see an example of the app in action, open the app and paste the following video link in the prompt window:
+To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public users of this app. By using <a href="https://vimeo.com/361224968" target="_blank">this sample video</a>, you can demo the app:
 
-<blockquote>https://vimeo.com/361224968</blockquote>
+<img src="http://g.recordit.co/BnWZ5mHIVK.gif">
 
-<strong>Please note:</strong> This app works best when used on a mobile device in landscape mode.
+<strong>*** Please note:</strong> This app works best when used on a mobile device in landscape mode.
+
+In the lab, actual videos (which start at the 5-minute mark and end at the 20-minute mark) will render a downloadable .xlsx file for formatted for further data analysis in the lab:
+
+<img src="https://i.imgur.com/ynYM8tU.png">
