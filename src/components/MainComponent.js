@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import RatingConsole from "./RatingConsoleComponent";
 import Navbar from "./NavbarComponent";
 import { Container, Typography } from "@material-ui/core";
