@@ -1,6 +1,18 @@
-import React, { Component } from 'react';
-import { Modal, ModalHeader, ModalBody, ModalFooter, Form } from 'reactstrap';
-import { Button, FormControl, TextField, InputLabel, MenuItem, Select, Grid, Typography } from '@material-ui/core';
+import React, { Component } from "react";
+import {
+  Button,
+  FormControl,
+  TextField,
+  InputLabel,
+  MenuItem,
+  Select,
+  Grid,
+  Typography,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle
+} from "@material-ui/core";
 
 class BeforeCodingModal extends Component {
   constructor(props) {
@@ -67,76 +79,80 @@ class BeforeCodingModal extends Component {
   render() {
     return (
       <div>
-        <Modal isOpen={this.state.modal} className={this.props.className}>
-          <ModalHeader>
+        <Dialog open={this.state.modal} className={this.props.className}>
+          <DialogTitle>
             <Typography variant="h5">Start Coding</Typography>
-          </ModalHeader>
-          <ModalBody>
-            <Form>
-              <Grid container spacing={3}>
-                <Grid item xs>
-                  <TextField
-                    label="Name"
-                    margin="dense"
-                    variant="outlined"
-                    name="coderName"
-                    id="coderName"
-                    onChange={(event) => this.onNameChange(event)}
-                  />
-                </Grid>
-                <Grid item xs>
-                  <TextField
-                    label="Couple"
-                    margin="dense"
-                    variant="outlined"
-                    name="codedCouple"
-                    id="codedCouple"
-                    onChange={(event) => this.onCoupleChange(event)}
-                  />
-                </Grid>
-                <Grid item xs>
-                  <FormControl>
-                    <InputLabel shrink>Partner</InputLabel>
-                    <Select
-                      value={this.state.codedPartner}
-                      onChange={(event) => this.onPartnerChange(event)}
-                    >
-                      <MenuItem value="LEFT">Left</MenuItem>
-                      <MenuItem value="RIGHT">Right</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Grid>
+          </DialogTitle>
+          <DialogContent>
+            <Grid container spacing={3}>
+              <Grid item xs>
+                <TextField
+                  label="Name"
+                  margin="dense"
+                  variant="outlined"
+                  name="coderName"
+                  id="coderName"
+                  onChange={event => this.onNameChange(event)}
+                />
               </Grid>
-              <Grid container spacing={3}>
-                <Grid item xs={8}>
-                  <TextField
-                    label="Video URL"
-                    margin="dense"
-                    variant="outlined"
-                    name="url"
-                    id="videoUrl"
-                    onChange={(event) => this.onSrcChange(event)}
-                  />
-                </Grid>
-                <Grid item xs={4}>
-                  <FormControl>
-                    <InputLabel shrink>Discussion</InputLabel>
-                    <Select
-                      value={this.state.codedDiscussion}
-                      onChange={(event) => this.onDiscussionChange(event)}
-                    >
-                      <MenuItem value="EVENTS">Events</MenuItem>
-                      <MenuItem value="CONFLICT">Conflict</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Grid>
+              <Grid item xs>
+                <TextField
+                  label="Couple"
+                  margin="dense"
+                  variant="outlined"
+                  name="codedCouple"
+                  id="codedCouple"
+                  onChange={event => this.onCoupleChange(event)}
+                />
               </Grid>
-            </Form>
-          </ModalBody>
-          <ModalFooter>
-            <Button variant="contained" color="primary"  onClick={this.startCoding}>Start</Button>
-          </ModalFooter>
-        </Modal>
+              <Grid item xs>
+                <FormControl>
+                  <InputLabel shrink>Partner</InputLabel>
+                  <Select
+                    value={this.state.codedPartner}
+                    onChange={event => this.onPartnerChange(event)}
+                  >
+                    <MenuItem value="LEFT">Left</MenuItem>
+                    <MenuItem value="RIGHT">Right</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+              <Grid item xs={8}>
+                <TextField
+                  label="Video URL"
+                  margin="dense"
+                  variant="outlined"
+                  name="url"
+                  id="videoUrl"
+                  onChange={event => this.onSrcChange(event)}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <FormControl>
+                  <InputLabel shrink>Discussion</InputLabel>
+                  <Select
+                    value={this.state.codedDiscussion}
+                    onChange={event => this.onDiscussionChange(event)}
+                  >
+                    <MenuItem value="EVENTS">Events</MenuItem>
+                    <MenuItem value="CONFLICT">Conflict</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={this.startCoding}
+            >
+              Start
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
     );
   }
