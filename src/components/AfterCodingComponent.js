@@ -24,9 +24,7 @@ class AfterCodingModal extends Component {
           open={this.props.endModalToggle}
           className={this.props.className}
         >
-          <DialogTitle close={closeBtn}>
-            <Typography variant="h5">Coding Completed</Typography>
-          </DialogTitle>
+          <DialogTitle close={closeBtn}>Coding Completed</DialogTitle>
           <DialogContent>
             <DialogContentText>
               <Typography variant="body1">

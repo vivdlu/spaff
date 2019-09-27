@@ -127,8 +127,6 @@ class RatingConsole extends Component {
             width="100%"
             height="100%"
             playing={this.state.playing}
-            playsinline="true"
-            controls="true"
             onStart={this.handleVideoStart}
             onProgress={this.handleTimeChange}
             onEnded={this.handleVideoEnd}

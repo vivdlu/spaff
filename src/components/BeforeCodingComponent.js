@@ -7,7 +7,6 @@ import {
   MenuItem,
   Select,
   Grid,
-  Typography,
   Dialog,
   DialogActions,
   DialogContent,
@@ -80,9 +79,7 @@ class BeforeCodingModal extends Component {
     return (
       <div>
         <Dialog open={this.state.modal} className={this.props.className}>
-          <DialogTitle>
-            <Typography variant="h5">Start Coding</Typography>
-          </DialogTitle>
+          <DialogTitle>Start Coding</DialogTitle>
           <DialogContent>
             <Grid container spacing={3}>
               <Grid item xs>
