@@ -126,6 +126,7 @@ class RatingConsole extends Component {
             url={this.state.src}
             width="100%"
             height="100%"
+            playsinline={true}
             playing={this.state.playing}
             onStart={this.handleVideoStart}
             onProgress={this.handleTimeChange}
