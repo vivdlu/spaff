@@ -21,3 +21,5 @@ To maintain HIPAA-compliance, actual video footage from the lab is unavailable f
 The ratings selected during the duration of the video are tracked in the state object. When the video ends, the state is translated into a downloadable .xlsx file formatted for further data analysis in the lab:
 
 <img src="https://i.imgur.com/Qg7NzRQ.png">
+
+And that's it! Click <a href="https://vivdlu.github.io/spaff" target="_blank">here</a> to open the app and start coding.
