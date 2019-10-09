@@ -1,3 +1,20 @@
+/* Login Styles */
+.login-main-container {
+  padding-top: 5vmax;
+  padding-bottom: 5vmax;
+}
+
+.login-header {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.login-card {
+  padding: 0px 20px 20px;
+}
+
 /* Rating Button Styles*/
 .btn-primary {
   font-size: 5vmin;
