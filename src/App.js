@@ -1,15 +1,21 @@
-import React, { Component } from "react";
-import Main from "./components/MainComponent";
+import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navigation from "./components/NavigationComponent";
+import Main from "./components/MainComponent";
+import Login from "./components/LoginComponent";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Main />
-      </div>
-    );
-  }
-}
+import * as ROUTES from "./shared/routes";
+
+const App = () => (
+  <Router>
+    <div>
+      <Navigation />
+      <hr />
+      <Route exact path={ROUTES.LOGIN} component={Login} />
+      <Route path={ROUTES.RATING} component={Main} />
+    </div>
+  </Router>
+);
 
 export default App;

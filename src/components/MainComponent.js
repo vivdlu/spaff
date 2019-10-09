@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import RatingConsole from "./RatingConsoleComponent";
-import Navbar from "./NavbarComponent";
 import { Container, Typography, SvgIcon } from "@material-ui/core";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
 
@@ -8,7 +7,6 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <Navbar />
         <Container maxWidth="lg">
           <DeviceOrientation lockOrientation={"landscape"}>
             <Orientation orientation="landscape" alwaysRender={false}>

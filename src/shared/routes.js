@@ -1,3 +1,2 @@
-export const LANDING = "/";
-export const SIGN_IN = "/login";
-export const HOME = "/home";
+export const LOGIN = "/";
+export const RATING = "/rating";
