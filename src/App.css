@@ -57,6 +57,11 @@ p.code-desc {
 }
 
 /* Form Styles */
+div.MuiDialog-paperWidthSm {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 div.MuiFormControl-root {
   width: 100%;
 }
