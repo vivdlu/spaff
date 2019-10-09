@@ -1,2 +1,1 @@
-export const LOGIN = "/";
-export const RATING = "/rating";
+export const HOME = "/";
