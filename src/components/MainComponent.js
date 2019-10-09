@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import RatingConsole from "./RatingConsoleComponent";
 import RotateMessage from "./RotateMessageComponent";
-import { Container, Typography, SvgIcon } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
 
 class Main extends Component {

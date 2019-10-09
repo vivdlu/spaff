@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Snackbar,
-  SnackbarContent,
-  Container,
-  Typography,
-  IconButton
-} from "@material-ui/core";
-import WarningIcon from "@material-ui/icons/Warning";
+import { Snackbar, SnackbarContent } from "@material-ui/core";
 
 function RotateMessage() {
   return (
