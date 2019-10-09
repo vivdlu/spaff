@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/spaff/static/css/main.ab07f7b4.chunk.css",
-    "main.js": "/spaff/static/js/main.dad0f14a.chunk.js",
-    "main.js.map": "/spaff/static/js/main.dad0f14a.chunk.js.map",
+    "main.css": "/spaff/static/css/main.f3e09b54.chunk.css",
+    "main.js": "/spaff/static/js/main.ce79254b.chunk.js",
+    "main.js.map": "/spaff/static/js/main.ce79254b.chunk.js.map",
     "runtime~main.js": "/spaff/static/js/runtime~main.6f00aec4.js",
     "runtime~main.js.map": "/spaff/static/js/runtime~main.6f00aec4.js.map",
     "static/css/2.0624914a.chunk.css": "/spaff/static/css/2.0624914a.chunk.css",
-    "static/js/2.70b41090.chunk.js": "/spaff/static/js/2.70b41090.chunk.js",
-    "static/js/2.70b41090.chunk.js.map": "/spaff/static/js/2.70b41090.chunk.js.map",
+    "static/js/2.d0ed11d2.chunk.js": "/spaff/static/js/2.d0ed11d2.chunk.js",
+    "static/js/2.d0ed11d2.chunk.js.map": "/spaff/static/js/2.d0ed11d2.chunk.js.map",
     "index.html": "/spaff/index.html",
-    "precache-manifest.cd44fc3edf2fe6670f26aff4c4785c45.js": "/spaff/precache-manifest.cd44fc3edf2fe6670f26aff4c4785c45.js",
+    "precache-manifest.4eb95661c58be57ab8ba2201fd63419a.js": "/spaff/precache-manifest.4eb95661c58be57ab8ba2201fd63419a.js",
     "service-worker.js": "/spaff/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/spaff/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.ab07f7b4.chunk.css.map": "/spaff/static/css/main.ab07f7b4.chunk.css.map"
+    "static/css/main.f3e09b54.chunk.css.map": "/spaff/static/css/main.f3e09b54.chunk.css.map"
   }
 }
