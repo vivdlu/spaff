@@ -145,6 +145,7 @@ class BeforeCodingModal extends Component {
               variant="contained"
               color="primary"
               onClick={this.startCoding}
+              fullWidth
             >
               Start
             </Button>

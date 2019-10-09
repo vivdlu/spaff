@@ -66,6 +66,10 @@ div.MuiDialogContent-root {
   overflow-y: visible;
 }
 
+div.MuiDialogActions-spacing {
+  padding: 10px 20px 20px;
+}
+
 /* Screen Portrait Orientation Message Styles */
 .portrait-container {
   text-align: center;
