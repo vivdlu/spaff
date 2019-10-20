@@ -17,7 +17,7 @@ class BeforeCodingModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      src: "",
+      src: "https://vimeo.com/361224968",
       coderName: "",
       codedCouple: "",
       codedPartner: "",
