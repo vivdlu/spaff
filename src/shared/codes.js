@@ -1,43 +1,42 @@
-export const CODES =
-[
+export const CODES = [
   {
     id: 1,
-    description:'Contempt, Belligerence, Stone walling'
+    description: "Contempt, Belligerence, Stone walling"
   },
   {
     id: 2,
-    description:'Anger, L/H Dom, Criticism, Defensiveness'
+    description: "Anger, L/H Dom, Criticism, Defensive"
   },
   {
     id: 3,
-    description:'Sadness, Despair, Hurt, Disappoint ment'
+    description: "Sadness, Despair, Hurt, Disappoint ment"
   },
   {
     id: 4,
-    description:'Victim Defensiveness, Whining'
+    description: "Non-blaming Victim Defensive, Whining"
   },
   {
     id: 5,
-    description:'Fear, Tension, Worry, Stress'
+    description: "Fear, Tension, Worry, Stress"
   },
   {
     id: 6,
-    description:'Neutral'
+    description: "Neutral"
   },
   {
     id: 7,
-    description:'Info Exchange and Responses'
+    description: "Info Exchange and Responses"
   },
   {
     id: 8,
-    description:'Active Interest, Curiosity, Low Val'
+    description: "Active Interest, Curiosity, Low Val"
   },
   {
     id: 9,
-    description:'Affection, Support, Empathy, High Val'
+    description: "Affection, Support, Empathy, High Val"
   },
   {
     id: 10,
-    description:'Shared Humor, Excitement, Happiness'
-  },
+    description: "Shared Humor, Excitement, Happiness"
+  }
 ];

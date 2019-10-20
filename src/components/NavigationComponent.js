@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 });
 
 function Navbar() {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const classes = useStyles();
   return (
     <AppBar position="static">
@@ -24,8 +24,11 @@ function Navbar() {
         <Typography className={classes.title} variant="h6">
           SPAFF App
         </Typography>
-        <Button color="inherit" onClick={() => setPlaying(!playing)}>
+        <Button key="play" color="inherit" onClick={() => setPlaying(true)}>
           Play
+        </Button>
+        <Button key="pause" color="inherit" onClick={() => setPlaying(false)}>
+          Pause
         </Button>
       </Toolbar>
     </AppBar>

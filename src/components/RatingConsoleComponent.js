@@ -3,7 +3,6 @@ import ReactPlayer from "react-player";
 import RatingDials from "./RatingDialsComponent";
 import BeforeCodingModal from "./BeforeCodingComponent";
 import AfterCodingModal from "./AfterCodingComponent";
-import { CODES } from "../shared/codes";
 import { importedRatings } from "../shared/importedRatings";
 import { exportedRatings } from "../shared/exportedRatings";
 
@@ -13,7 +12,6 @@ class RatingConsole extends Component {
     this.state = {
       currentTime: 0,
       currentCode: 6,
-      codes: CODES,
       src: "",
       coderName: "",
       codedCouple: "",
@@ -23,6 +21,7 @@ class RatingConsole extends Component {
       endModal: false
     };
     this.Player = React.createRef();
+    this.handlePlayingChange = this.handlePlayingChange.bind(this);
     this.handleRatingChange = this.handleRatingChange.bind(this);
     this.handleTimeChange = this.handleTimeChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -33,6 +32,12 @@ class RatingConsole extends Component {
     this.handleVideoStart = this.handleVideoStart.bind(this);
     this.handleVideoEnd = this.handleVideoEnd.bind(this);
     this.refreshPage = this.refreshPage.bind(this);
+  }
+
+  handlePlayingChange(playChange) {
+    this.setState({
+      playing: playChange
+    });
   }
 
   handleRatingChange(newCode) {
@@ -46,6 +51,7 @@ class RatingConsole extends Component {
     this.setState({
       currentTime: Math.round(Player.getCurrentTime()) - 300
     });
+    console.log(this.state.currentTime, this.state.currentCode);
     importedRatings.push(this.state);
     for (let i = 0; i < importedRatings.length; i++) {
       let lineRating = {};
@@ -133,10 +139,7 @@ class RatingConsole extends Component {
             onEnded={this.handleVideoEnd}
           />
         </div>
-        <RatingDials
-          ratingChange={this.handleRatingChange}
-          codes={this.state.codes}
-        />
+        <RatingDials ratingChange={this.handleRatingChange} />
         <AfterCodingModal
           exportedRatings={exportedRatings}
           endModalToggle={this.state.endModal}
