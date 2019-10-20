@@ -13,7 +13,7 @@ import RefreshIcon from "@material-ui/icons/Refresh";
 
 class AfterCodingModal extends Component {
   render() {
-    const closeBtn = (
+    const refreshBtn = (
       <Button onClick={this.props.refresh}>
         <RefreshIcon />
       </Button>
@@ -36,7 +36,7 @@ class AfterCodingModal extends Component {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            {closeBtn}
+            {refreshBtn}
             <Download
               exportedRatings={this.props.exportedRatings}
               coderName={this.props.coderName}
