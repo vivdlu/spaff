@@ -17,8 +17,6 @@ class BeforeCodingModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: true,
-      playing: false,
       src: "",
       coderName: "",
       codedCouple: "",
@@ -69,16 +67,15 @@ class BeforeCodingModal extends Component {
     this.props.partnerChange(this.state.codedPartner);
     this.props.discussionChange(this.state.codedDiscussion);
     this.props.srcChange(this.state.src);
-    this.setState({
-      modal: false,
-      playing: true
-    });
   }
 
   render() {
     return (
       <div>
-        <Dialog open={this.state.modal} className={this.props.className}>
+        <Dialog
+          open={this.props.startModalToggle}
+          className={this.props.className}
+        >
           <DialogTitle>Start Coding</DialogTitle>
           <DialogContent>
             <Grid container spacing={3}>

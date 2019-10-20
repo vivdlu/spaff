@@ -18,10 +18,10 @@ class RatingConsole extends Component {
       codedPartner: "",
       codedDiscussion: "",
       playing: false,
+      startModal: true,
       endModal: false
     };
     this.Player = React.createRef();
-    this.handlePlayingChange = this.handlePlayingChange.bind(this);
     this.handleRatingChange = this.handleRatingChange.bind(this);
     this.handleTimeChange = this.handleTimeChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -32,12 +32,6 @@ class RatingConsole extends Component {
     this.handleVideoStart = this.handleVideoStart.bind(this);
     this.handleVideoEnd = this.handleVideoEnd.bind(this);
     this.refreshPage = this.refreshPage.bind(this);
-  }
-
-  handlePlayingChange(playChange) {
-    this.setState({
-      playing: playChange
-    });
   }
 
   handleRatingChange(newCode) {
@@ -51,7 +45,6 @@ class RatingConsole extends Component {
     this.setState({
       currentTime: Math.round(Player.getCurrentTime()) - 300
     });
-    console.log(this.state.currentTime, this.state.currentCode);
     importedRatings.push(this.state);
     for (let i = 0; i < importedRatings.length; i++) {
       let lineRating = {};
@@ -103,6 +96,10 @@ class RatingConsole extends Component {
   handleVideoStart() {
     const Player = this.Player.current;
     Player.seekTo(300, "seconds");
+    this.setState({
+      startModal: false,
+      playing: true
+    });
   }
 
   handleVideoEnd() {
@@ -119,11 +116,13 @@ class RatingConsole extends Component {
     return (
       <div>
         <BeforeCodingModal
+          startModalToggle={this.state.startModal}
           nameChange={this.handleNameChange}
           coupleChange={this.handleCoupleChange}
           partnerChange={this.handlePartnerChange}
           srcChange={this.handleSrcChange}
           discussionChange={this.handleDiscussionChange}
+          playingChange={this.handlePlayingChange}
         />
         <div className="player-wrapper">
           <ReactPlayer
