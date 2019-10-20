@@ -16,7 +16,7 @@ To maintain HIPAA-compliance, actual video footage from the lab is unavailable f
 
 <strong>Please note:</strong> This app works best in landscape mode on a mobile or tablet device.
 
-<img src="http://g.recordit.co/ruMqU3zsyj.gif">
+<img src="http://g.recordit.co/vCQB3KMXIh.gif">
 
 The ratings selected during the duration of the video are tracked in the state object. When the video ends, the state is translated into a downloadable .xlsx file formatted for further data analysis in the lab:
 
