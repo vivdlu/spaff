@@ -104,7 +104,8 @@ class RatingConsole extends Component {
 
   handleVideoEnd() {
     this.setState({
-      endModal: true
+      endModal: true,
+      playing: false
     });
   }
 

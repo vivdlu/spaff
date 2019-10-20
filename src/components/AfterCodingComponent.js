@@ -24,7 +24,7 @@ class AfterCodingModal extends Component {
           open={this.props.endModalToggle}
           className={this.props.className}
         >
-          <DialogTitle close={closeBtn}>Coding Completed</DialogTitle>
+          <DialogTitle>Coding Completed</DialogTitle>
           <DialogContent>
             <DialogContentText>
               <Typography variant="body1">
@@ -36,6 +36,7 @@ class AfterCodingModal extends Component {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
+            {closeBtn}
             <Download
               exportedRatings={this.props.exportedRatings}
               coderName={this.props.coderName}
