@@ -17,7 +17,7 @@ class RatingConsole extends Component {
       codedCouple: "",
       codedPartner: "",
       codedDiscussion: "",
-      playing: true,
+      playing: false,
       startModal: true,
       endModal: false
     };
@@ -95,7 +95,8 @@ class RatingConsole extends Component {
   handleCodingStart() {
     this.Player.current.seekTo(300, "seconds");
     this.setState({
-      startModal: false
+      startModal: false,
+      playing: true
     });
   }
 
@@ -130,7 +131,7 @@ class RatingConsole extends Component {
             width="100%"
             height="100%"
             playsinline={true}
-            playing={true}
+            playing={this.state.playing}
             onProgress={this.handleTimeChange}
             onEnded={this.handleCodingEnd}
           />
