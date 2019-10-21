@@ -29,10 +29,6 @@ class RatingConsole extends Component {
     this.handlePartnerChange = this.handlePartnerChange.bind(this);
     this.handleSrcChange = this.handleSrcChange.bind(this);
     this.handleDiscussionChange = this.handleDiscussionChange.bind(this);
-    this.handleCodingStart = this.handleCodingStart.bind(this);
-    this.handleVideoStart = this.handleVideoStart.bind(this);
-    this.handleCodingEnd = this.handleCodingEnd.bind(this);
-    this.refreshPage = this.refreshPage.bind(this);
   }
 
   handleRatingChange(newCode) {
@@ -105,16 +101,16 @@ class RatingConsole extends Component {
     Player.seekTo(300, "seconds");
   };
 
-  handleCodingEnd() {
+  handleCodingEnd = () => {
     this.setState({
       endModal: true,
       playing: false
     });
-  }
+  };
 
-  refreshPage() {
+  refreshPage = () => {
     window.location.reload(true);
-  }
+  };
 
   render() {
     return (
@@ -128,7 +124,7 @@ class RatingConsole extends Component {
           discussionChange={this.handleDiscussionChange}
           codingStart={this.handleCodingStart}
         />
-        <Fragment className="player-wrapper">
+        <div className="player-wrapper">
           <ReactPlayer
             className="player"
             ref={this.Player}
@@ -142,7 +138,7 @@ class RatingConsole extends Component {
             onProgress={this.handleTimeChange}
             onEnded={this.handleCodingEnd}
           />
-        </Fragment>
+        </div>
         <RatingDials ratingChange={this.handleRatingChange} />
         <AfterCodingModal
           exportedRatings={exportedRatings}
