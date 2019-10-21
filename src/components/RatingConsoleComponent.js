@@ -18,6 +18,7 @@ class RatingConsole extends Component {
       codedPartner: "",
       codedDiscussion: "",
       playing: false,
+      startModal: true,
       endModal: false
     };
     this.Player = React.createRef();
@@ -28,8 +29,8 @@ class RatingConsole extends Component {
     this.handlePartnerChange = this.handlePartnerChange.bind(this);
     this.handleSrcChange = this.handleSrcChange.bind(this);
     this.handleDiscussionChange = this.handleDiscussionChange.bind(this);
-    this.handleVideoStart = this.handleVideoStart.bind(this);
-    this.handleVideoEnd = this.handleVideoEnd.bind(this);
+    this.handleCodingStart = this.handleCodingStart.bind(this);
+    this.handleCodingEnd = this.handleCodingEnd.bind(this);
     this.refreshPage = this.refreshPage.bind(this);
   }
 
@@ -81,8 +82,7 @@ class RatingConsole extends Component {
 
   handleSrcChange(newSrc) {
     this.setState({
-      src: newSrc,
-      playing: true
+      src: newSrc
     });
   }
 
@@ -92,15 +92,16 @@ class RatingConsole extends Component {
     });
   }
 
-  handleVideoStart() {
+  handleCodingStart() {
     const Player = this.Player.current;
     Player.seekTo(300, "seconds");
     this.setState({
+      startModal: false,
       playing: true
     });
   }
 
-  handleVideoEnd() {
+  handleCodingEnd() {
     this.setState({
       endModal: true,
       playing: false
@@ -115,12 +116,13 @@ class RatingConsole extends Component {
     return (
       <div>
         <BeforeCodingModal
+          startModalToggle={this.state.startModal}
           nameChange={this.handleNameChange}
           coupleChange={this.handleCoupleChange}
           partnerChange={this.handlePartnerChange}
           srcChange={this.handleSrcChange}
           discussionChange={this.handleDiscussionChange}
-          playingChange={this.handlePlayingChange}
+          codingStart={this.handleCodingStart}
         />
         <div className="player-wrapper">
           <ReactPlayer
@@ -131,9 +133,8 @@ class RatingConsole extends Component {
             height="100%"
             playsinline={true}
             playing={this.state.playing}
-            onStart={this.handleVideoStart}
             onProgress={this.handleTimeChange}
-            onEnded={this.handleVideoEnd}
+            onEnded={this.handleCodingEnd}
           />
         </div>
         <RatingDials ratingChange={this.handleRatingChange} />
