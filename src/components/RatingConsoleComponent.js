@@ -18,7 +18,6 @@ class RatingConsole extends Component {
       codedPartner: "",
       codedDiscussion: "",
       playing: false,
-      startModal: true,
       endModal: false
     };
     this.Player = React.createRef();
@@ -97,7 +96,6 @@ class RatingConsole extends Component {
     const Player = this.Player.current;
     Player.seekTo(300, "seconds");
     this.setState({
-      startModal: false,
       playing: true
     });
   }
@@ -117,7 +115,6 @@ class RatingConsole extends Component {
     return (
       <div>
         <BeforeCodingModal
-          startModalToggle={this.state.startModal}
           nameChange={this.handleNameChange}
           coupleChange={this.handleCoupleChange}
           partnerChange={this.handlePartnerChange}
