@@ -130,19 +130,11 @@ class RatingConsole extends Component {
             url={this.state.src}
             width="100%"
             height="100%"
+            playsinline={true}
+            controls={true}
             playing={this.state.playing}
             onProgress={this.handleTimeChange}
             onEnded={this.handleCodingEnd}
-            config={{
-              vimeo: {
-                playerOptions: {
-                  autoplay: true,
-                  controls: true,
-                  playsinline: true,
-                  quality: "720p"
-                }
-              }
-            }}
           />
         </div>
         <RatingDials ratingChange={this.handleRatingChange} />
