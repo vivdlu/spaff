@@ -10,14 +10,7 @@ function Main(props) {
     <Fragment>
       <Navbar />
       <Container maxWidth="lg">
-        <DeviceOrientation>
-          <Orientation orientation="portrait" alwaysRender={false}>
-            <RotateMessage />
-          </Orientation>
-          <Orientation orientation="landscape" alwaysRender={true}>
-            <RatingConsole />
-          </Orientation>
-        </DeviceOrientation>
+        <RatingConsole />
       </Container>
     </Fragment>
   );
