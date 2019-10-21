@@ -17,7 +17,6 @@ class RatingConsole extends Component {
       codedCouple: "",
       codedPartner: "",
       codedDiscussion: "",
-      playing: false,
       startModal: true,
       endModal: false
     };
@@ -91,8 +90,7 @@ class RatingConsole extends Component {
 
   handleCodingStart = () => {
     this.setState({
-      startModal: false,
-      playing: true
+      startModal: false
     });
   };
 
@@ -103,8 +101,7 @@ class RatingConsole extends Component {
 
   handleCodingEnd = () => {
     this.setState({
-      endModal: true,
-      playing: false
+      endModal: true
     });
   };
 
@@ -126,14 +123,14 @@ class RatingConsole extends Component {
         />
         <div className="player-wrapper">
           <ReactPlayer
-            className="player"
+            className="react-player"
             ref={this.Player}
             url={this.state.src}
             width="100%"
             height="100%"
             playsinline={true}
             controls={true}
-            playing={this.state.playing}
+            playing
             onStart={this.handleVideoStart}
             onProgress={this.handleTimeChange}
             onEnded={this.handleCodingEnd}

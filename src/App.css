@@ -28,15 +28,15 @@ p.code-desc {
 }
 
 /* Video Player Styles */
-.player {
-  padding-top: 1.5vmin;
+.player-wrapper {
+  position: relative;
+  padding-top: 50vmin; /* Player ratio: 100 / (1280 / 540) */
 }
 
-/* iPad Video Player Styles */
-@media (min-width: 1024px) {
-  .player {
-    height: 50vmin !important;
-  }
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* Form Styles */
