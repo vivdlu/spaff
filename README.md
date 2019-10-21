@@ -12,12 +12,14 @@ Today, researchers in the Love Lab at The Gottman Institute continue to use the 
 
 ## Demo
 
-To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public users of this app. By using <a href="https://vimeo.com/361224968" target="_blank">this sample video</a>, you can demo the app:
+To maintain HIPAA-compliance, actual video footage from the lab is unavailable for public users of this app. If you do not provide a URL in the app, a sample video will load.
 
-<img src="http://g.recordit.co/BnWZ5mHIVK.gif">
+<strong>Please note:</strong> This app works best in landscape mode on a mobile or tablet device.
 
-<strong>*** Please note:</strong> This app works best when used on a mobile device in landscape mode.
+<img src="http://g.recordit.co/vCQB3KMXIh.gif">
 
 The ratings selected during the duration of the video are tracked in the state object. When the video ends, the state is translated into a downloadable .xlsx file formatted for further data analysis in the lab:
 
 <img src="https://i.imgur.com/Qg7NzRQ.png">
+
+Ready to start? <a href="https://vivdlu.github.io/spaff/" target="_blank">Launch the app</a>.
