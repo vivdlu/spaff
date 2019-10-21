@@ -131,6 +131,7 @@ class RatingConsole extends Component {
             width="100%"
             height="100%"
             playsinline={true}
+            controls={true}
             playing={this.state.playing}
             onProgress={this.handleTimeChange}
             onEnded={this.handleCodingEnd}
