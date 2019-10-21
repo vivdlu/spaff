@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import ReactPlayer from "react-player";
 import RatingDials from "./RatingDialsComponent";
 import BeforeCodingModal from "./BeforeCodingComponent";
@@ -93,17 +93,17 @@ class RatingConsole extends Component {
     });
   }
 
-  handleCodingStart() {
+  handleCodingStart = () => {
     this.setState({
       startModal: false,
       playing: true
     });
-  }
+  };
 
-  handleVideoStart() {
+  handleVideoStart = () => {
     const Player = this.Player.current;
     Player.seekTo(300, "seconds");
-  }
+  };
 
   handleCodingEnd() {
     this.setState({
@@ -118,7 +118,7 @@ class RatingConsole extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <BeforeCodingModal
           startModalToggle={this.state.startModal}
           nameChange={this.handleNameChange}
@@ -128,7 +128,7 @@ class RatingConsole extends Component {
           discussionChange={this.handleDiscussionChange}
           codingStart={this.handleCodingStart}
         />
-        <div className="player-wrapper">
+        <Fragment className="player-wrapper">
           <ReactPlayer
             className="player"
             ref={this.Player}
@@ -142,7 +142,7 @@ class RatingConsole extends Component {
             onProgress={this.handleTimeChange}
             onEnded={this.handleCodingEnd}
           />
-        </div>
+        </Fragment>
         <RatingDials ratingChange={this.handleRatingChange} />
         <AfterCodingModal
           exportedRatings={exportedRatings}
@@ -153,7 +153,7 @@ class RatingConsole extends Component {
           codedDiscussion={this.state.codedDiscussion}
           refresh={this.refreshPage}
         />
-      </div>
+      </Fragment>
     );
   }
 }

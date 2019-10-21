@@ -35,7 +35,7 @@ p.code-desc {
 /* iPad Video Player Styles */
 @media (min-width: 1024px) {
   .player {
-    height: 60vmin !important;
+    height: 50vmin !important;
   }
 }
 
