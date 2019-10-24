@@ -17,7 +17,7 @@ class RatingConsole extends Component {
       codedCouple: "",
       codedPartner: "",
       codedDiscussion: "",
-      playing: null,
+      playing: false,
       startModal: true,
       endModal: false
     };
@@ -58,15 +58,13 @@ class RatingConsole extends Component {
       codedPartner: newPartner,
       codedCouple: newCouple,
       codedDiscussion: newDiscussion,
-      startModal: false
+      startModal: false,
+      playing: true
     });
   }
 
   handleVideoReady() {
     this.Player.current.seekTo(300, "seconds");
-    this.setState({
-      playing: true
-    });
   }
 
   handleCodingEnd() {
