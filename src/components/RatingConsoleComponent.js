@@ -17,6 +17,7 @@ class RatingConsole extends Component {
       codedCouple: "",
       codedPartner: "",
       codedDiscussion: "",
+      playing: false,
       startModal: true,
       endModal: false
     };
@@ -57,7 +58,8 @@ class RatingConsole extends Component {
       codedPartner: newPartner,
       codedCouple: newCouple,
       codedDiscussion: newDiscussion,
-      startModal: false
+      startModal: false,
+      playing: true
     });
   }
 
@@ -67,6 +69,7 @@ class RatingConsole extends Component {
 
   handleCodingEnd() {
     this.setState({
+      playing: false,
       endModal: true
     });
   }
@@ -92,9 +95,9 @@ class RatingConsole extends Component {
             onStart={this.handleVideoStart.bind(this)}
             onProgress={this.handleTimeChange.bind(this)}
             onEnded={this.handleCodingEnd.bind(this)}
+            playing={this.state.playing}
             playsinline
             controls
-            playing
           />
         </div>
         <RatingDials ratingChange={this.handleRatingChange.bind(this)} />
