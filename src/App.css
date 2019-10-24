@@ -47,6 +47,7 @@ div.MuiDialog-paperWidthSm {
 
 div.MuiFormControl-root {
   width: 100%;
+  overflow: hidden;
 }
 
 /* Before Coding Dialog Styles */
