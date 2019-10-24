@@ -63,7 +63,7 @@ class RatingConsole extends Component {
     });
   }
 
-  handleVideoReady() {
+  handleVideoStart() {
     this.Player.current.seekTo(300, "seconds");
   }
 
@@ -92,7 +92,7 @@ class RatingConsole extends Component {
             url={this.state.src}
             width="100%"
             height="100%"
-            onReady={this.handleVideoReady.bind(this)}
+            onStart={this.handleVideoStart.bind(this)}
             onProgress={this.handleTimeChange.bind(this)}
             onEnded={this.handleCodingEnd.bind(this)}
             playing={this.state.playing}
