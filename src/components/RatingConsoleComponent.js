@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, createRef } from "react";
 import ReactPlayer from "react-player";
 import RatingDials from "./RatingDialsComponent";
 import BeforeCodingModal from "./BeforeCodingComponent";
@@ -20,7 +20,7 @@ class RatingConsole extends Component {
       startModal: true,
       endModal: false
     };
-    this.Player = React.createRef();
+    this.Player = createRef();
   }
 
   handleRatingChange(newCode) {
@@ -30,9 +30,8 @@ class RatingConsole extends Component {
   }
 
   handleTimeChange() {
-    const Player = this.Player.current;
     this.setState({
-      currentTime: Math.round(Player.getCurrentTime()) - 300
+      currentTime: Math.round(this.Player.current.getCurrentTime()) - 300
     });
     importedRatings.push(this.state);
     for (let i = 0; i < importedRatings.length; i++) {
