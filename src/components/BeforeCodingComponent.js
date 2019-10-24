@@ -28,7 +28,6 @@ class BeforeCodingModal extends Component {
     this.onPartnerChange = this.onPartnerChange.bind(this);
     this.onSrcChange = this.onSrcChange.bind(this);
     this.onDiscussionChange = this.onDiscussionChange.bind(this);
-    this.startCoding = this.startCoding.bind(this);
   }
 
   onNameChange(event) {
@@ -142,7 +141,7 @@ class BeforeCodingModal extends Component {
             <Button
               variant="contained"
               color="primary"
-              onClick={this.startCoding}
+              onClick={this.startCoding.bind(this)}
               fullWidth
             >
               Start

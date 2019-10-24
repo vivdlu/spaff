@@ -11,44 +11,39 @@ import {
 } from "@material-ui/core";
 import RefreshIcon from "@material-ui/icons/Refresh";
 
-class AfterCodingModal extends Component {
-  render() {
-    const refreshBtn = (
-      <Button onClick={this.props.refresh}>
-        <RefreshIcon />
-      </Button>
-    );
-    return (
-      <div>
-        <Dialog
-          open={this.props.endModalToggle}
-          className={this.props.className}
-        >
-          <DialogTitle>Coding Completed</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              <Typography variant="body1">
-                {this.props.coderName}, you've finished rating the{" "}
-                {this.props.codedPartner} partner of couple{" "}
-                {this.props.codedCouple} in their {this.props.codedDiscussion}{" "}
-                discussion. Click the button to download your data file.
-              </Typography>
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            {refreshBtn}
-            <Download
-              exportedRatings={this.props.exportedRatings}
-              coderName={this.props.coderName}
-              codedCouple={this.props.codedCouple}
-              codedPartner={this.props.codedPartner}
-              codedDiscussion={this.props.codedDiscussion}
-            />
-          </DialogActions>
-        </Dialog>
-      </div>
-    );
-  }
-}
+const AfterCodingModal = props => {
+  const refreshBtn = (
+    <Button onClick={props.refresh}>
+      <RefreshIcon />
+    </Button>
+  );
+  return (
+    <div>
+      <Dialog open={props.endModalToggle} className={props.className}>
+        <DialogTitle>Coding Completed</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            <Typography variant="body1">
+              {props.coderName}, you've finished rating the {props.codedPartner}{" "}
+              partner of couple {props.codedCouple} in their{" "}
+              {props.codedDiscussion} discussion. Click the button to download
+              your data file.
+            </Typography>
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          {refreshBtn}
+          <Download
+            exportedRatings={props.exportedRatings}
+            coderName={props.coderName}
+            codedCouple={props.codedCouple}
+            codedPartner={props.codedPartner}
+            codedDiscussion={props.codedDiscussion}
+          />
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
+};
 
 export default AfterCodingModal;

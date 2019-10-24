@@ -5,7 +5,7 @@ import { Container } from "@material-ui/core";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
 import Navbar from "./NavigationComponent";
 
-function Main(props) {
+const Main = props => {
   return (
     <Fragment>
       <Navbar />
@@ -21,6 +21,6 @@ function Main(props) {
       </Container>
     </Fragment>
   );
-}
+};
 
 export default Main;

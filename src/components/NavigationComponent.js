@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   }
 });
 
-function Navbar() {
+const Navbar = () => {
   const classes = useStyles();
   return (
     <AppBar position="static">
@@ -20,5 +20,5 @@ function Navbar() {
       </Toolbar>
     </AppBar>
   );
-}
+};
 export default Navbar;

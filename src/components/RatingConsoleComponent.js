@@ -21,13 +21,6 @@ class RatingConsole extends Component {
       endModal: false
     };
     this.Player = React.createRef();
-    this.handleRatingChange = this.handleRatingChange.bind(this);
-    this.handleTimeChange = this.handleTimeChange.bind(this);
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleCoupleChange = this.handleCoupleChange.bind(this);
-    this.handlePartnerChange = this.handlePartnerChange.bind(this);
-    this.handleSrcChange = this.handleSrcChange.bind(this);
-    this.handleDiscussionChange = this.handleDiscussionChange.bind(this);
   }
 
   handleRatingChange(newCode) {
@@ -88,38 +81,37 @@ class RatingConsole extends Component {
     });
   }
 
-  handleCodingStart = () => {
+  handleCodingStart() {
     this.setState({
       startModal: false
     });
-  };
+  }
 
-  handleVideoStart = () => {
-    const Player = this.Player.current;
-    Player.seekTo(300, "seconds");
-  };
+  handleVideoStart() {
+    this.Player.current.seekTo(300, "seconds");
+  }
 
-  handleCodingEnd = () => {
+  handleCodingEnd() {
     this.setState({
       endModal: true
     });
-  };
+  }
 
-  refreshPage = () => {
+  refreshPage() {
     window.location.reload(true);
-  };
+  }
 
   render() {
     return (
       <Fragment>
         <BeforeCodingModal
           startModalToggle={this.state.startModal}
-          nameChange={this.handleNameChange}
-          coupleChange={this.handleCoupleChange}
-          partnerChange={this.handlePartnerChange}
-          srcChange={this.handleSrcChange}
-          discussionChange={this.handleDiscussionChange}
-          codingStart={this.handleCodingStart}
+          nameChange={this.handleNameChange.bind(this)}
+          coupleChange={this.handleCoupleChange.bind(this)}
+          partnerChange={this.handlePartnerChange.bind(this)}
+          srcChange={this.handleSrcChange.bind(this)}
+          discussionChange={this.handleDiscussionChange.bind(this)}
+          codingStart={this.handleCodingStart.bind(this)}
         />
         <div className="player-wrapper">
           <ReactPlayer
@@ -128,15 +120,15 @@ class RatingConsole extends Component {
             url={this.state.src}
             width="100%"
             height="100%"
-            onStart={this.handleVideoStart}
-            onProgress={this.handleTimeChange}
-            onEnded={this.handleCodingEnd}
+            onStart={this.handleVideoStart.bind(this)}
+            onProgress={this.handleTimeChange.bind(this)}
+            onEnded={this.handleCodingEnd.bind(this)}
             playsinline
             controls
             playing
           />
         </div>
-        <RatingDials ratingChange={this.handleRatingChange} />
+        <RatingDials ratingChange={this.handleRatingChange.bind(this)} />
         <AfterCodingModal
           exportedRatings={exportedRatings}
           endModalToggle={this.state.endModal}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Snackbar, SnackbarContent } from "@material-ui/core";
 
-function RotateMessage() {
+const RotateMessage = () => {
   return (
     <Snackbar
       anchorOrigin={{
@@ -14,6 +14,6 @@ function RotateMessage() {
       <SnackbarContent variant="warning" message="Please rotate your device." />
     </Snackbar>
   );
-}
+};
 
 export default RotateMessage;
