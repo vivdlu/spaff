@@ -17,7 +17,7 @@ class RatingConsole extends Component {
       codedCouple: "",
       codedPartner: "",
       codedDiscussion: "",
-      playing: false,
+      playing: true,
       startModal: true,
       endModal: false
     };
@@ -63,9 +63,6 @@ class RatingConsole extends Component {
   }
 
   handleVideoReady() {
-    this.setState({
-      playing: true
-    });
     this.Player.current.seekTo(300, "seconds");
   }
 
