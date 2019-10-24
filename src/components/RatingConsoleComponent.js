@@ -50,38 +50,13 @@ class RatingConsole extends Component {
     }
   }
 
-  handleNameChange(newName) {
+  handleCodingStart(newSrc, newName, newPartner, newCouple, newDiscussion) {
     this.setState({
-      coderName: newName
-    });
-  }
-
-  handleCoupleChange(newCouple) {
-    this.setState({
-      codedCouple: newCouple
-    });
-  }
-
-  handlePartnerChange(newPartner) {
-    this.setState({
-      codedPartner: newPartner
-    });
-  }
-
-  handleSrcChange(newSrc) {
-    this.setState({
-      src: newSrc
-    });
-  }
-
-  handleDiscussionChange(newDiscussion) {
-    this.setState({
-      codedDiscussion: newDiscussion
-    });
-  }
-
-  handleCodingStart() {
-    this.setState({
+      src: newSrc,
+      coderName: newName,
+      codedPartner: newPartner,
+      codedCouple: newCouple,
+      codedDiscussion: newDiscussion,
       startModal: false
     });
   }
@@ -105,11 +80,6 @@ class RatingConsole extends Component {
       <Fragment>
         <BeforeCodingModal
           startModalToggle={this.state.startModal}
-          nameChange={this.handleNameChange.bind(this)}
-          coupleChange={this.handleCoupleChange.bind(this)}
-          partnerChange={this.handlePartnerChange.bind(this)}
-          srcChange={this.handleSrcChange.bind(this)}
-          discussionChange={this.handleDiscussionChange.bind(this)}
           codingStart={this.handleCodingStart.bind(this)}
         />
         <div className="player-wrapper">

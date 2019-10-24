@@ -41,12 +41,13 @@ const BeforeCodingModal = props => {
   };
 
   const startCoding = () => {
-    props.nameChange(coderName);
-    props.coupleChange(codedCouple);
-    props.partnerChange(codedPartner);
-    props.discussionChange(codedDiscussion);
-    props.srcChange(src);
-    props.codingStart();
+    props.codingStart(
+      src,
+      coderName,
+      codedPartner,
+      codedCouple,
+      codedDiscussion
+    );
   };
 
   return (
