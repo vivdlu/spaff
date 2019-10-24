@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/spaff/static/css/main.c039354f.chunk.css",
-    "main.js": "/spaff/static/js/main.67f46f11.chunk.js",
-    "main.js.map": "/spaff/static/js/main.67f46f11.chunk.js.map",
+    "main.js": "/spaff/static/js/main.c126ce39.chunk.js",
+    "main.js.map": "/spaff/static/js/main.c126ce39.chunk.js.map",
     "runtime~main.js": "/spaff/static/js/runtime~main.6f00aec4.js",
     "runtime~main.js.map": "/spaff/static/js/runtime~main.6f00aec4.js.map",
     "static/css/2.0624914a.chunk.css": "/spaff/static/css/2.0624914a.chunk.css",
-    "static/js/2.9b9bf5d2.chunk.js": "/spaff/static/js/2.9b9bf5d2.chunk.js",
-    "static/js/2.9b9bf5d2.chunk.js.map": "/spaff/static/js/2.9b9bf5d2.chunk.js.map",
+    "static/js/2.e0fa18d8.chunk.js": "/spaff/static/js/2.e0fa18d8.chunk.js",
+    "static/js/2.e0fa18d8.chunk.js.map": "/spaff/static/js/2.e0fa18d8.chunk.js.map",
     "index.html": "/spaff/index.html",
-    "precache-manifest.c5e3138a3311ceb69b0dab4f59917e9f.js": "/spaff/precache-manifest.c5e3138a3311ceb69b0dab4f59917e9f.js",
+    "precache-manifest.a8938fda8190ea256cd49b93bec140ba.js": "/spaff/precache-manifest.a8938fda8190ea256cd49b93bec140ba.js",
     "service-worker.js": "/spaff/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/spaff/static/css/2.0624914a.chunk.css.map",
     "static/css/main.c039354f.chunk.css.map": "/spaff/static/css/main.c039354f.chunk.css.map"
